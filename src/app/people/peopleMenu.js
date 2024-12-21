@@ -10,6 +10,12 @@ const PeopleMenu = () => {
     useEffect(() => {
         const sketch = (p) => {
             let randomNum = 0;
+            let lights = [];
+
+            for (let i = 0; i < 8; i++) {
+                // [currSize, targetSize, growRate]
+                lights.push([100, 100, 2]);
+            }
 
             function isHovering(x, y, radius) {
                 let d = p.dist(p.mouseX, p.mouseY, x, y);
@@ -29,12 +35,13 @@ const PeopleMenu = () => {
             p.draw = () => {
                 p.background(0);
                 p.cursor(p.ARROW);
-                ring(p.windowWidth*1.2, ['PRODUCERS', 'DESIGN', 'MODEL', 'PRODUCTION','CREATIVE', 'PR', 'HAIR & MAKEUP', 'DANCE'], false, false, 255, true);
+                
+                ring(p.windowWidth*1.2, ['PRODUCERS', 'DESIGN', 'MODEL', 'PRODUCTION','CREATIVE', 'PR', 'HAIR & MAKEUP', 'DANCE'], false, false, 255, lights);
                 ring(p.windowWidth*0.9, ['', '', '', ''], true, true, 200, false);
                 ring(p.windowWidth*0.6, ['', '', '', '', '', '', ''], true, false, 200, false);
             }
               
-            function ring(radius, points = [], shouldRotate=false, rotateLeft=false,strokeColor=255, addLights = false){
+            function ring(radius, points = [], shouldRotate=false, rotateLeft=false,strokeColor=255, lights=[]){
                 let centerX = p.windowWidth;
                 let centerY = p.windowHeight;
                 p.noFill();
@@ -68,27 +75,49 @@ const PeopleMenu = () => {
                   let px = centerX + (arcWidth / 2) * p.cos(currentAngle); 
                   let py = centerY + (arcHeight / 2) * p.sin(currentAngle);
                   
-                  if (addLights) {
+                  if (lights.length > 0) {
                     p.noStroke();
                     p.fill(255,255,255,1);
-                    let numCircles = 140;
+
                     if (i == randomNum){
-                        numCircles = 200;
+                        lights[i][1] = 200;
                     }
+
+
+                    if (lights[i][0] >= lights[i][1]) {
+                        lights[i][2] = -2;
+                    }
+                    if (lights[i][0] < 100) {
+                        lights[i][2] = 1
+                    }
+
                     if (isHovering(px, py, 10)){
-                      numCircles = 250;
-                      p.cursor(p.HAND);
-                      // Navigate to new page 
-                      if (p.mouseIsPressed) {
-                        // navigate(`/${points[i].toLowerCase()}`); 
-                        console.log('selected', points[i]);
+                        lights[i][1] = 250;
+                        if (lights[i][0] >= lights[i][1]){
+                            lights[i][2] = 0;
+                        } else if (lights[i][0] > lights[i][1]){
+                            lights[i][0] = lights[i][1];
+                        } else{
+                            lights[i][2] = 6;
+                        }
+                        p.cursor(p.HAND);
+                        // Navigate to new page 
+                        if (p.mouseIsPressed) {
+                            // navigate(`/${points[i].toLowerCase()}`); 
+                            console.log('selected', points[i]);
                       }
+                    } else if (i != randomNum){
+                        lights[i][1] = 100;
                     }
-                    for(let j = 0; j < numCircles; j++){
+                    
+                    lights[i][0] += lights[i][2]
+  
+                    for(let j = 0; j < lights[i][0]; j++){
                         p.ellipse(px,py, j*0.3);
                     }
                   }
               
+                  // TEXT
                   p.stroke(strokeColor);
                   p.fill(strokeColor);
                   p.circle(px, py, 10);
