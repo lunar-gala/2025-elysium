@@ -1,10 +1,12 @@
 "use client"
 
 import React, {useRef, useEffect} from "react";
+// import { useNavigate } from "react-router-dom";
 import p5 from "p5";
 
 const PeopleMenu = () => {
     const canvasRef = useRef();
+    // const navigate = useNavigate();
     useEffect(() => {
         const sketch = (p) => {
             let randomNum = 0;
@@ -25,8 +27,8 @@ const PeopleMenu = () => {
             };
               
             p.draw = () => {
-                //2D stuff
                 p.background(0);
+                p.cursor(p.ARROW);
                 ring(p.windowWidth*1.2, ['PRODUCERS', 'DESIGN', 'MODEL', 'PRODUCTION','CREATIVE', 'PR', 'HAIR & MAKEUP', 'DANCE'], false, false, 255, true);
                 ring(p.windowWidth*0.9, ['', '', '', ''], true, true, 200, false);
                 ring(p.windowWidth*0.6, ['', '', '', '', '', '', ''], true, false, 200, false);
@@ -51,15 +53,18 @@ const PeopleMenu = () => {
                   let t = 0
                   if(shouldRotate){
                     if (rotateLeft){
-                      t = ((i / (numPoints)) + (p.frameCount * 0.006) % 1) % 1;   
+                      t = ((i / (numPoints-1)) + (p.frameCount * 0.006) % 1) % 1;   
                     }else{
-                      t = ((i / (numPoints)) + (p.frameCount * -0.005) % 1) % 1; 
-                      if (t <= 0) t += 1; 
+                      t = ((i / (numPoints-1)) + (p.frameCount * -0.005) % 1) % 1; 
+                      if (t < 0) t += 1; 
                     }
-                  }else{
+                  } else{
                     t = i / (numPoints - 1);
                   }
-                  let currentAngle = p.lerp(p.PI + p.QUARTER_PI/8, 3*p.HALF_PI - p.QUARTER_PI/8, t);
+                  let currentAngle =  p.lerp(p.PI + p.QUARTER_PI/8, 3*p.HALF_PI - p.QUARTER_PI/8, t); 
+                  if(shouldRotate){
+                    currentAngle = p.lerp(p.PI, 3*p.HALF_PI, t);
+                  }
                   let px = centerX + (arcWidth / 2) * p.cos(currentAngle); 
                   let py = centerY + (arcHeight / 2) * p.sin(currentAngle);
                   
@@ -72,6 +77,12 @@ const PeopleMenu = () => {
                     }
                     if (isHovering(px, py, 10)){
                       numCircles = 250;
+                      p.cursor(p.HAND);
+                      // Navigate to new page 
+                      if (p.mouseIsPressed) {
+                        // navigate(`/${points[i].toLowerCase()}`); 
+                        console.log('selected', points[i]);
+                      }
                     }
                     for(let j = 0; j < numCircles; j++){
                         p.ellipse(px,py, j*0.3);
@@ -103,6 +114,7 @@ const PeopleMenu = () => {
             peopleMenu.remove()
         };
     }, [])
+    // }, [navigate])
     return <div ref={canvasRef}></div>;
 }
 
