@@ -7,12 +7,17 @@ const PeopleMenu = () => {
     const canvasRef = useRef();
     useEffect(() => {
         const sketch = (p) => {
+            let randomNum = 0;
+
             function isHovering(x, y, radius) {
                 let d = p.dist(p.mouseX, p.mouseY, x, y);
                 return d < radius; 
             }
             p.setup = () =>{
                 p.createCanvas(p.windowWidth, p.windowHeight).parent(canvasRef.current);
+                setInterval(() => {
+                    randomNum = Math.floor(p.random(8));
+                  }, 900);
             }
 
             p.windowResized = () => {
@@ -62,8 +67,11 @@ const PeopleMenu = () => {
                     p.noStroke();
                     p.fill(255,255,255,1);
                     let numCircles = 140;
+                    if (i == randomNum){
+                        numCircles = 200;
+                    }
                     if (isHovering(px, py, 10)){
-                      numCircles = 200;
+                      numCircles = 250;
                     }
                     for(let j = 0; j < numCircles; j++){
                         p.ellipse(px,py, j*0.3);
