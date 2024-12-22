@@ -3,16 +3,19 @@
 import React, {useRef, useEffect} from "react";
 // import { useNavigate } from "react-router-dom";
 import p5 from "p5";
+import BackButton from "./utils";
+import "./utils.css"
 
-const PeopleMenu = () => {
+const DepartmentMenu = ({department, teams}) => {
     const canvasRef = useRef();
     // const navigate = useNavigate();
+    
     useEffect(() => {
         const sketch = (p) => {
             let randomNum = 0;
             let lights = [];
 
-            for (let i = 0; i < 8; i++) {
+            for (let i = 0; i < teams.length; i++) {
                 // [currSize, targetSize, growRate]
                 lights.push([100, 100, 2]);
             }
@@ -36,9 +39,9 @@ const PeopleMenu = () => {
                 p.background(0);
                 p.cursor(p.ARROW);
                 
-                ring(p.windowWidth*1.2, ['PRODUCERS', 'DESIGN', 'MODEL', 'PRODUCTION','CREATIVE', 'PR', 'HAIR & MAKEUP', 'DANCE'], false, false, 255, lights);
-                ring(p.windowWidth*0.7, ['', '', '', ''], true, true, 180);
-                ring(p.windowWidth*0.4, ['', '', '', '', '', '', ''], true, false, 180);
+                ring(p.windowWidth*1.6, ['', '', '', '','', '', '  ', ''], true, true, 180);
+                ring(p.windowWidth*1.1, teams, false, false, 255, lights);
+                ring(p.windowWidth*0.6, ['', '', '', '', '', '', ''], true, false, 180);
             }
               
             function ring(radius, points = [], shouldRotate=false, rotateLeft=false,strokeColor=255, lights=[]){
@@ -68,7 +71,7 @@ const PeopleMenu = () => {
                   } else{
                     t = i / (numPoints - 1);
                   }
-                  let currentAngle =  p.lerp(p.PI + p.QUARTER_PI/8, 3*p.HALF_PI - p.QUARTER_PI/8, t); 
+                  let currentAngle =  p.lerp(p.PI + p.QUARTER_PI/4, 3*p.HALF_PI - p.QUARTER_PI/4, t); 
                   if(shouldRotate){
                     currentAngle = p.lerp(p.PI, 3*p.HALF_PI, t);
                   }
@@ -143,7 +146,15 @@ const PeopleMenu = () => {
         };
     }, [])
     // }, [navigate])
-    return <div ref={canvasRef}></div>;
+    return (
+        <div className="relative w-full h-full">
+          <div ref={canvasRef} className="absolute top-0 left-0 w-full h-full"></div>
+          <div className="absolute top-5 left-5 z-10">
+            <h1 className="heading">{department}</h1>
+            <BackButton/>
+          </div>
+        </div>
+      );
 }
 
-export default PeopleMenu
+export default DepartmentMenu

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import PeopleMenu from "./people/peopleMenu";
+import DepartmentMenu from "./people/departmentMenu"
 export default function Home() {
   return (
     <div>
@@ -97,6 +98,7 @@ export default function Home() {
         </a> */
       /* </footer> */}
       <PeopleMenu/>
+      {/* <DepartmentMenu department="CREATIVE" teams={['PHOTO', 'WEB', 'PRINT', 'STAGE']}/> */}
     </div>
   );
 }
