@@ -80,7 +80,7 @@ const PeopleMenu = () => {
                     p.fill(255,255,255,1);
 
                     if (i == randomNum){
-                        lights[i][1] = 200;
+                        lights[i][1] = 220;
                     }
 
 
@@ -88,7 +88,7 @@ const PeopleMenu = () => {
                         lights[i][2] = -2;
                     }
                     if (lights[i][0] < 100) {
-                        lights[i][2] = 1
+                        lights[i][2] = 2
                     }
 
                     if (isHovering(px, py, 10)){
