@@ -1,11 +1,9 @@
 "use client"
 
-import ExampleHomePage from "../../components/ExampleHomePage";
-
 export default function Home() {
   return (
     <div className="min-h-screen">
-      <ExampleHomePage />
+      
     </div>
   );
 }
