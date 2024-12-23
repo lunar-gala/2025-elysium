@@ -1,9 +1,9 @@
 "use client"
 
-export default function Home() {
+export default function People() {
   return (
-    <div className="min-h-screen">
-      
+    <div>
+      People
     </div>
   );
 }

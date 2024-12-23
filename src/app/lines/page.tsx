@@ -1,9 +1,9 @@
 "use client"
 
-export default function Home() {
+export default function Lines() {
   return (
-    <div className="min-h-screen">
-      
+    <div>
+      Lines
     </div>
   );
 }

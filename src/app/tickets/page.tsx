@@ -1,9 +1,9 @@
 "use client"
 
-export default function Home() {
+export default function Tickets() {
   return (
-    <div className="min-h-screen">
-      
+    <div>
+      Tickets
     </div>
   );
 }
