@@ -151,7 +151,7 @@ const DepartmentMenu = ({department, teams}) => {
           <div ref={canvasRef} className="absolute top-0 left-0 w-full h-full"></div>
           <div className="absolute top-5 left-5 z-10">
             <h1 className="heading">{department}</h1>
-            <BackButton/>
+            <BackButton prevText="PEOPLE"/>
           </div>
         </div>
       );
