@@ -34,7 +34,7 @@ export default function RootLayout({
         <div className="h-screen flex flex-col">
           <Navigation />
           <MainContent>
-            {children}
+            {children} 
           </MainContent>
         </div>
       </body>
