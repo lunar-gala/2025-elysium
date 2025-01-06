@@ -1,0 +1,167 @@
+:root {
+  --color-bg: #ffffff;
+  --color-text-main: #212121;
+  --color-text-header: #212121;
+  --wrapper-height: 87vh;
+}
+
+* {
+  box-sizing: border-box;
+}
+[hidden] {
+  display: none !important;
+}
+
+body {
+  margin: 0;
+}
+
+p {
+  font-family: sans-serif;
+  font-variation-settings: "wght" 300;
+  font-size: 14px;
+  line-height: 16pt;
+}
+
+b {
+  font-family: sans-serif;
+  font-variation-settings: "wght" 500;
+  font-size: 14px;
+}
+
+ol {
+  font-family: sans-serif;
+  font-variation-settings: "wght" 300;
+  font-size: 14px;
+  line-height: 16pt;
+}
+
+body {
+  background-color: var(--color-bg);
+}
+
+.content {
+  background-color: var(--color-bg);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  padding: 0px 0px;
+}
+
+button {
+  color: #cccccc;
+  font-family: sans-serif;
+  font-variation-settings: "wght" 300;
+  cursor: pointer; /* Change cursor to pointer on hover */
+  background-color: white;
+  border: none;
+  text-align: left;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  padding: 0px 0px;
+}
+
+a {
+  color: #212121;
+  text-decoration: none;
+}
+
+.label {
+  color: #7f7f7f;
+  text-align: center;
+}
+
+.title {
+  color: var(--color-text-header);
+  font-family: sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 72px;
+  margin: 0;
+  padding: 10px 0px;
+  line-height: 74px;
+}
+
+.thumbnail {
+  padding: 30px 20vw;
+}
+
+
+.description {
+  padding: 10px;
+  font-family: sans-serif;
+  font-variation-settings: "wght" 300;
+  font-size: 14px;
+  line-height: 15pt;
+}
+
+.carousel-container {
+  width: 60vw;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel img {
+  width: 100%;
+  cursor: pointer;
+}
+
+.carousel img {
+  object-fit: cover;
+}
+
+.nav_contain {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.nav.prev {
+  text-align: left;
+}
+
+.nav.next {
+  text-align: right;
+}
+
+.grid_cols {
+  background-color: var(--color-bg);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
+  justify-content: left;
+  padding: 0px 0px;
+}
+
+/* Lightbox Styles */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
