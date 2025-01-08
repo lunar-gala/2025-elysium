@@ -1,11 +1,8 @@
 import Image from "next/image";
-import PeopleMenu from "./people/peopleMenu";
-import DepartmentMenu from "./people/departmentMenu"
-import TeamPictures from "./people/teamPictures"
 export default function Home() {
   return (
     <div>
-      {/* <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
+      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
         <Image
           className="dark:invert"
           src="/next.svg"
@@ -97,20 +94,7 @@ export default function Home() {
           />
           Go to nextjs.org →
         </a> */
-      /* </footer> */}
-      {/* <PeopleMenu/> */}
-      {/* <DepartmentMenu department="CREATIVE" teams={['PHOTO', 'WEB', 'PRINT', 'STAGE']}/> */}
-      <TeamPictures team="WEB" department="CREATIVE" numDepartmentTeams={4} people={[
-        { name: 'Suyeon Cha', role: 'Co-Head of Web' },
-        { name: 'Viviana Staicu', role: 'Co-Head of Web' },
-        { name: 'Margaret He', role: 'Member of Web' },
-        { name: 'Annie Geng', role: 'Member of Web' },
-        { name: 'Kaitlyn Ng', role: 'Member of Web' },
-        { name: 'Suanna Zhong', role: 'Member of Web' },
-        { name: 'Sophie Feng', role: 'Member of Web' },
-        { name: 'Xiao Yuan', role: 'Member of Web' },
-        { name: 'Lucy Wang', role: 'Member of Web' },
-  ]} />
+      /* </footer>
     </div>
   );
 }
