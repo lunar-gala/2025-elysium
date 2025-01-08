@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Navigation from "../components/navigation";
+import MainContent from "../components/MainContent";
 import localFont from "next/font/local";
 import "./globals.css";
 
@@ -26,9 +28,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        suppressHydrationWarning
+        className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden`}
       >
-        {children}
+        <div className="h-screen flex flex-col">
+          <Navigation />
+          <MainContent>
+            {children}
+          </MainContent>
+        </div>
       </body>
     </html>
   );
