@@ -1,14 +1,12 @@
 "use client"
 
 import React, {useRef, useEffect} from "react";
-// import { useNavigate } from "react-router-dom";
 import p5 from "p5";
 import BackButton from "./utils";
 import "./utils.css"
 
 const DepartmentMenu = ({department, teams}) => {
     const canvasRef = useRef();
-    // const navigate = useNavigate();
     
     useEffect(() => {
         const sketch = (p) => {
@@ -145,7 +143,6 @@ const DepartmentMenu = ({department, teams}) => {
             peopleMenu.remove()
         };
     }, [])
-    // }, [navigate])
     return (
         <div className="relative w-full h-full">
           <div ref={canvasRef} className="absolute top-0 left-0 w-full h-full"></div>

@@ -1,14 +1,12 @@
 "use client"
 
 import React, {useRef, useEffect} from "react";
-// import { useNavigate } from "react-router-dom";
 import p5 from "p5";
 import BackButton from "./utils";
 import "./utils.css"
 
 const TeamPictures = ({team, department, numDepartmentTeams, people}) => {
     const canvasRef = useRef();
-    // const navigate = useNavigate();
     
     useEffect(() => {
         const sketch = (p) => {
@@ -129,10 +127,8 @@ const TeamPictures = ({team, department, numDepartmentTeams, people}) => {
                         p.pop();
 
                         p.push();
-                        p.fill(100); // Circle fill color
-                        p.noStroke(); // No border for circles
-
-                        // Draw circle
+                        p.fill(100); 
+                        p.noStroke();
                         p.ellipse(x, y, circleDiameter);
                         p.pop();
                     
@@ -140,7 +136,7 @@ const TeamPictures = ({team, department, numDepartmentTeams, people}) => {
 
                         // Draw name text
                         p.noStroke();
-                        p.fill(255); // White text color
+                        p.fill(255); 
                         p.textSize(16);
                         p.textStyle(p.NORMAL);
                         p.text(names[index], x, y + circleDiameter / 2 + 20);
@@ -148,7 +144,7 @@ const TeamPictures = ({team, department, numDepartmentTeams, people}) => {
                         // Draw role text
                         p.textSize(12);
                         p.textStyle(p.ITALIC);
-                        p.fill(150); // Grayish text for roles
+                        p.fill(150); 
                         p.text(roles[index], x, y + circleDiameter / 2 + 40);
                     }
                 }
@@ -198,7 +194,6 @@ const TeamPictures = ({team, department, numDepartmentTeams, people}) => {
             peopleMenu.remove()
         };
     }, [])
-    // }, [navigate])
     return (
         <div className="relative w-full h-full">
           <div ref={canvasRef} className="absolute top-0 left-0 w-full h-full "></div>

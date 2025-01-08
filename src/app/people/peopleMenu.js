@@ -1,12 +1,10 @@
 "use client"
 
 import React, {useRef, useEffect} from "react";
-// import { useNavigate } from "react-router-dom";
 import p5 from "p5";
 
 const PeopleMenu = () => {
     const canvasRef = useRef();
-    // const navigate = useNavigate();
     useEffect(() => {
         const sketch = (p) => {
             let randomNum = 0;
@@ -98,7 +96,6 @@ const PeopleMenu = () => {
                         p.cursor(p.HAND);
                         // Navigate to new page 
                         if (p.mouseIsPressed) {
-                            // navigate(`/${points[i].toLowerCase()}`); 
                             console.log('selected', points[i]);
                       }
                     } else if (i != randomNum){
@@ -142,7 +139,6 @@ const PeopleMenu = () => {
             peopleMenu.remove()
         };
     }, [])
-    // }, [navigate])
     return <div ref={canvasRef}></div>;
 }
 
