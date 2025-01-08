@@ -1,5 +1,6 @@
+"use client"
 import TeamPictures from '../../teamPictures';
-export default function Home() {
+export default function Template() {
   return (
     <div>
       <TeamPictures team="WEB" department="CREATIVE" numDepartmentTeams={4} people={[
