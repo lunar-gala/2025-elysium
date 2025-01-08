@@ -2,9 +2,13 @@
 
 import React, {useRef, useEffect} from "react";
 import p5 from "p5";
+import { useRouter } from 'next/navigation';
+
 
 const PeopleMenu = () => {
     const canvasRef = useRef();
+    const router = useRouter(); 
+
     useEffect(() => {
         const sketch = (p) => {
             let randomNum = 0;
@@ -94,10 +98,9 @@ const PeopleMenu = () => {
                             lights[i][2] = 6;
                         }
                         p.cursor(p.HAND);
-                        // Navigate to new page 
                         if (p.mouseIsPressed) {
-                            console.log('selected', points[i]);
-                      }
+                            router.push(`/people/${points[i].toLowerCase()}`); // Navigate to a page based on the item's name
+                        }
                     } else if (i != randomNum){
                         lights[i][1] = 100;
                     }

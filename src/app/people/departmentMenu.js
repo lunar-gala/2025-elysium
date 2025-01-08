@@ -4,9 +4,12 @@ import React, {useRef, useEffect} from "react";
 import p5 from "p5";
 import BackButton from "./utils";
 import "./utils.css"
+import { useRouter } from 'next/navigation';
+
 
 const DepartmentMenu = ({department, teams}) => {
     const canvasRef = useRef();
+    const router = useRouter(); 
     
     useEffect(() => {
         const sketch = (p) => {
@@ -99,9 +102,8 @@ const DepartmentMenu = ({department, teams}) => {
                         p.cursor(p.HAND);
                         // Navigate to new page 
                         if (p.mouseIsPressed) {
-                            // navigate(`/${points[i].toLowerCase()}`); 
-                            console.log('selected', points[i]);
-                      }
+                          router.push(`/people/${department.toLowerCase()}/${points[i].toLowerCase()}`); 
+                        }
                     } else if (i != randomNum){
                         lights[i][1] = 100;
                     }
@@ -148,7 +150,7 @@ const DepartmentMenu = ({department, teams}) => {
           <div ref={canvasRef} className="absolute top-0 left-0 w-full h-full"></div>
           <div className="absolute top-5 left-5 z-10">
             <h1 className="heading">{department}</h1>
-            <BackButton prevText="PEOPLE"/>
+            <BackButton prevText="PEOPLE" prevURL= "/people"/>
           </div>
         </div>
       );
