@@ -40,6 +40,26 @@ const HeroSection = () => {
   return (
     <div className="hero-section">
       <main className="main-content">
+        {/* Background Video */}
+        <video
+          autoPlay
+          loop
+          playsInline
+          muted
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            zIndex: -1, // Ensure the video stays in the background
+          }}
+        >
+          <source src="./dune.mov" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+
         <h1 className="title">Act I: Emergence</h1>
         <p className="subtitle">
           The dawn of your journey, brimming with hope, passion, and light.
