@@ -1,11 +1,9 @@
-"use client"
-
-import ExampleHomePage from "../components/home/ExampleHomePage";
+import HeroSection from "../components/home/HeroSection";
 
 export default function Home() {
   return (
-    <div className="min-h-screen">
-      <ExampleHomePage />
-    </div>
+    <main>
+      <HeroSection />
+    </main>
   );
 }

@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,15 +8,67 @@
   --foreground: #ededed;
 }
 
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-} */
+/* General page setup */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Georgia', serif;
+  color: white;
+  background: radial-gradient(circle, rgba(38, 36, 123, 0.8), black),
+    url('/your-background-image.jpg') center/cover no-repeat;
+  height: 100%;
+  overflow: hidden;
+}
+/* Hero Section styling */
+.hero-section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  padding-top: 5%;
+  width: 100%;
+  box-sizing: border-box; /* To ensure the container width adjusts responsively */
+}
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+/* Oval Container */
+.oval-container {
+  position: relative;
+  width: 100%; /* Full width of the container */
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.oval {
+  width: 100%;
+  height: auto;
+}
+
+/* Circle Glow Effect */
+.glow-circle {
+  fill: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 0 0 rgba(255, 255, 255, 0));
+}
+
+.glow-circle:hover {
+  fill: white;
+  filter: drop-shadow(0 0 1px rgba(255, 255, 255, 0.8)) 
+          drop-shadow(0 0 2px rgba(255, 255, 255, 0.6)) 
+          drop-shadow(0 0 3px rgba(255, 255, 255, 0.4));
+}
+/* Labels */
+.label {
+  position: absolute;
+  font-size: 2vw; /* Responsive font size based on viewport width */
+  color: white;
+  font-weight: 300;
+  text-align: center;
+  transform: translateX(-50%); /* Centers the label horizontally */
+  white-space: nowrap;
 }
