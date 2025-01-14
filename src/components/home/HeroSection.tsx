@@ -1,7 +1,24 @@
-
-import React from "react";
+'use client';  // Add this line at the top
+import React, { useState, useEffect } from 'react';
 
 const HeroSection = () => {
+  const [screenWidth, setScreenWidth] = useState<number>(window.innerWidth);
+  const [screenHeight, setScreenHeight] = useState<number>(window.innerHeight);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setScreenWidth(window.innerWidth);
+      setScreenHeight(window.innerHeight);
+    };
+
+    // Attach the resize event listener
+    window.addEventListener('resize', handleResize);
+
+    // Clean up the event listener on component unmount
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
   // Define the parameters of the ellipse
   const cx = 50; // Center x-coordinate as a percentage of container width
   const cy = 25; // Center y-coordinate as a percentage of container height
@@ -20,7 +37,7 @@ const HeroSection = () => {
   });
 
   // Define bottom ellipse position and its radius
-  const bottomEllipse = { x: 50, y: 90, rx: 20, ry: 30 }; // Horizontal, vertical radii for the bottom ellipse
+  const bottomEllipse = { x: 50, y: 80+20*screenWidth/screenHeight*0.5, rx: 20, ry: 20*screenWidth/screenHeight }; // Horizontal, vertical radii for the bottom ellipse
 
   // Calculate the positions for the 3 circles spread evenly from top middle to right of the bottom ellipse
   const numCircles = 3;
@@ -83,14 +100,14 @@ const HeroSection = () => {
             stroke="white"
             fill="none"
             opacity="0.25"
-            strokeWidth="0.25"
+            strokeWidth="0.1"
           />
           {circles.map((circle, index) => (
             <circle
               key={index}
               cx={`${circle.x}%`} // Circle position as percentage of container width
               cy={`${circle.y}%`} // Circle position as percentage of container height
-              r="0.03vw"
+              r="0.01vw"
               fill="white"
               className="glow-circle"
             />
@@ -105,7 +122,7 @@ const HeroSection = () => {
             stroke="white"
             fill="none"
             opacity="0.25"
-            strokeWidth="0.25"
+            strokeWidth="0.1"
           />
 
           {/* Rotating Circles (3 evenly spaced from top middle to right) */}
@@ -117,7 +134,7 @@ const HeroSection = () => {
               key={index}
               cx={`${circle.x}%`} // Circle position on the ellipse path
               cy={`${circle.y}%`} // Circle position on the ellipse path (mirrored)
-              r="0.03vw" // Size of the flipped circles
+              r="0.01vw" // Size of the flipped circles
               fill="white"
               className="glow-circle"
             />
