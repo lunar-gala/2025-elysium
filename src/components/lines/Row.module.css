@@ -1,0 +1,10 @@
+.line {
+    margin-bottom: 20px;
+    align-self: center;
+  }
+    
+  .models {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
