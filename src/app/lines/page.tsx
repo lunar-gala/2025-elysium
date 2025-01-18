@@ -28,146 +28,135 @@ const chairs = [
     '/chair/IMG_9116.JPG',
     '/chair/IMG_9117.JPG',
 ];
-const rows = [
-    {
-        models: [
-            {
-                images: chairs,
-                caption: 'line 1',
-            },
-            {
-                images: chairs,
-                caption: 'line 2',
-            },
-            {
-                images: chairs,
-                caption: 'line 3',
-            },
-            {
-                images: chairs,
-                caption: 'line 4',
-            },
-            {
-                images: chairs,
-                caption: 'line 5',
-            },
-            {
-                images: chairs,
-                caption: 'line 6',
-            },
-            {
-                images: chairs,
-                caption: 'line 7',
-            },
-        ],
-    },
-    {
-        models: [            {
-            images: [
-                '/360/IMG_9237.JPG',
-                '/360/IMG_9239.JPG',
-                '/360/IMG_9241.JPG',
-                '/360/IMG_9243.JPG',
-                '/360/IMG_9245.JPG',
-                '/360/IMG_9247.JPG',
-                '/360/IMG_9249.JPG',
-                '/360/IMG_9251.JPG',
-            ],
-            caption: 'line 8',
-        },
-        {
-            images: [
-                '/360/IMG_9237.JPG',
-                '/360/IMG_9239.JPG',
-                '/360/IMG_9241.JPG',
-                '/360/IMG_9243.JPG',
-                '/360/IMG_9245.JPG',
-                '/360/IMG_9247.JPG',
-                '/360/IMG_9249.JPG',
-                '/360/IMG_9251.JPG',
-            ],
-            caption: 'line 9',
-        },
-        {
-            images: [
-                '/360/IMG_9253.JPG',
-                '/360/IMG_9255.JPG',
-                '/360/IMG_9257.JPG',
-                '/360/IMG_9259.JPG',
-                '/360/IMG_9261.JPG',
-                '/360/IMG_9263.JPG',
-                '/360/IMG_9265.JPG',
-                '/360/IMG_9267.JPG',
-            ],
-            caption: 'line 10',
-        },
-        {
-            images: [
-                '/360/IMG_9237.JPG',
-                '/360/IMG_9239.JPG',
-                '/360/IMG_9241.JPG',
-                '/360/IMG_9243.JPG',
-                '/360/IMG_9245.JPG',
-                '/360/IMG_9247.JPG',
-                '/360/IMG_9249.JPG',
-                '/360/IMG_9251.JPG',
-            ],
-            caption: 'line 11',
-        },
-        {
-            images: [
-                '/360/IMG_9237.JPG',
-                '/360/IMG_9239.JPG',
-                '/360/IMG_9241.JPG',
-                '/360/IMG_9243.JPG',
-                '/360/IMG_9245.JPG',
-                '/360/IMG_9247.JPG',
-                '/360/IMG_9249.JPG',
-                '/360/IMG_9251.JPG',
-            ],
-            caption: 'line 12',
-        },
-        {
-            images: [
-                '/360/IMG_9237.JPG',
-                '/360/IMG_9239.JPG',
-                '/360/IMG_9241.JPG',
-                '/360/IMG_9243.JPG',
-                '/360/IMG_9245.JPG',
-                '/360/IMG_9247.JPG',
-                '/360/IMG_9249.JPG',
-                '/360/IMG_9251.JPG',
-            ],
-            caption: 'line 13',
-        },
-        {
-            images: [
-                '/360/IMG_9237.JPG',
-                '/360/IMG_9239.JPG',
-                '/360/IMG_9241.JPG',
-                '/360/IMG_9243.JPG',
-                '/360/IMG_9245.JPG',
-                '/360/IMG_9247.JPG',
-                '/360/IMG_9249.JPG',
-                '/360/IMG_9251.JPG',
-            ],
-            caption: 'line 14',
-        },
-        ],
-    },
-];
 
+const models = [
+    {
+        images: chairs,
+        caption: 'line 1',
+    },
+    {
+        images: chairs,
+        caption: 'line 2',
+    },
+    {
+        images: chairs,
+        caption: 'line 3',
+    },
+    {
+        images: chairs,
+        caption: 'line 4',
+    },
+    {
+        images: chairs,
+        caption: 'line 5',
+    },
+    {
+        images: chairs,
+        caption: 'line 6',
+    },
+    {
+        images: chairs,
+        caption: 'line 7',
+    },
+    {
+        images: [
+            '/360/IMG_9237.JPG',
+            '/360/IMG_9239.JPG',
+            '/360/IMG_9241.JPG',
+            '/360/IMG_9243.JPG',
+            '/360/IMG_9245.JPG',
+            '/360/IMG_9247.JPG',
+            '/360/IMG_9249.JPG',
+            '/360/IMG_9251.JPG',
+        ],
+        caption: 'line 8',
+    },
+    {
+        images: [
+            '/360/IMG_9237.JPG',
+            '/360/IMG_9239.JPG',
+            '/360/IMG_9241.JPG',
+            '/360/IMG_9243.JPG',
+            '/360/IMG_9245.JPG',
+            '/360/IMG_9247.JPG',
+            '/360/IMG_9249.JPG',
+            '/360/IMG_9251.JPG',
+        ],
+        caption: 'line 9',
+    },
+    {
+        images: [
+            '/360/IMG_9253.JPG',
+            '/360/IMG_9255.JPG',
+            '/360/IMG_9257.JPG',
+            '/360/IMG_9259.JPG',
+            '/360/IMG_9261.JPG',
+            '/360/IMG_9263.JPG',
+            '/360/IMG_9265.JPG',
+            '/360/IMG_9267.JPG',
+        ],
+        caption: 'line 10',
+    },
+    {
+        images: [
+            '/360/IMG_9237.JPG',
+            '/360/IMG_9239.JPG',
+            '/360/IMG_9241.JPG',
+            '/360/IMG_9243.JPG',
+            '/360/IMG_9245.JPG',
+            '/360/IMG_9247.JPG',
+            '/360/IMG_9249.JPG',
+            '/360/IMG_9251.JPG',
+        ],
+        caption: 'line 11',
+    },
+    {
+        images: [
+            '/360/IMG_9237.JPG',
+            '/360/IMG_9239.JPG',
+            '/360/IMG_9241.JPG',
+            '/360/IMG_9243.JPG',
+            '/360/IMG_9245.JPG',
+            '/360/IMG_9247.JPG',
+            '/360/IMG_9249.JPG',
+            '/360/IMG_9251.JPG',
+        ],
+        caption: 'line 12',
+    },
+    {
+        images: [
+            '/360/IMG_9237.JPG',
+            '/360/IMG_9239.JPG',
+            '/360/IMG_9241.JPG',
+            '/360/IMG_9243.JPG',
+            '/360/IMG_9245.JPG',
+            '/360/IMG_9247.JPG',
+            '/360/IMG_9249.JPG',
+            '/360/IMG_9251.JPG',
+        ],
+        caption: 'line 13',
+    },
+    {
+        images: [
+            '/360/IMG_9237.JPG',
+            '/360/IMG_9239.JPG',
+            '/360/IMG_9241.JPG',
+            '/360/IMG_9243.JPG',
+            '/360/IMG_9245.JPG',
+            '/360/IMG_9247.JPG',
+            '/360/IMG_9249.JPG',
+            '/360/IMG_9251.JPG',
+        ],
+        caption: 'line 14',
+    },
+]
   return (
     <div className={styles.container}>
-      {rows.map((row, rowIndex) => (
-        <div className={styles.row} key={rowIndex}>
-            {row.models.map((model, index) => (
-                <Link href={`/lines/${model.caption.split(' ').join('-')}`} key={(rowIndex + 1)*7 + index} >
-                    <Model images={model.images} caption={model.caption} />
-                </Link>
-            ))}
-      </div>
-      ))}
+        {(models).map((model, index) => (
+            <Link href={`/lines/${model.caption.split(' ').join('-')}`} key={index} >
+                <Model images={model.images} caption={model.caption} />
+            </Link>
+        ))}
     </div>
   );
 }
