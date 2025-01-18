@@ -1,10 +1,11 @@
 "use client"
 
-import Row from '../../components/lines/Row';
+import Link from 'next/link'; // Import Link from Next.js
 import Model from '../../components/lines/Line';
 import styles from './Container.module.css';
 
 export default function Lines() {
+    
 const chairs = [
     '/chair/IMG_9084.JPG',
     '/chair/IMG_9086.JPG',
@@ -158,18 +159,15 @@ const rows = [
 
   return (
     <div className={styles.container}>
-      {rows.map((row, index) => (
-        <Row key={index} models={row.models} />
+      {rows.map((row, rowIndex) => (
+        <div className={styles.row} key={rowIndex}>
+            {row.models.map((model, index) => (
+                <Link href={`/lines/${model.caption.split(' ').join('-')}`} key={(rowIndex + 1)*7 + index} >
+                    <Model images={model.images} caption={model.caption} />
+                </Link>
+            ))}
+      </div>
       ))}
     </div>
   );
 }
-
-/* 
-
-      <div className={styles.models}>
-        {models.map((model, index) => (
-          <Model key={index} images={model.images} caption={model.caption} />
-        ))}
-      </div>
-*/

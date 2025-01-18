@@ -12,3 +12,13 @@
   flex-wrap: wrap;
   gap: 10px;
 }
+
+
+.row {
+  margin-bottom: 20px;
+  align-self: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
+}

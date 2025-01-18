@@ -1,5 +1,6 @@
 // src/components/Model.tsx
 import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
 import Image from 'next/image';
 import styles from './Line.module.css';
 
@@ -8,7 +9,10 @@ interface ModelProps {
   caption: string;
 }
 
+
 const Model: React.FC<ModelProps> = ({ images, caption }) => {
+  const name_components = caption.split(" ");
+  const id = name_components.join('-');
   const [currentImage, setCurrentImage] = useState(images[0]);
   const [started, setStarted] = useState(false);
 
@@ -25,6 +29,8 @@ const Model: React.FC<ModelProps> = ({ images, caption }) => {
           clearInterval(interval);
         }
       }, 100); // Adjust the speed (100ms in this case)
+    } else if (!started) {
+      setCurrentImage(images[0]);
     }
 
     return () => {
