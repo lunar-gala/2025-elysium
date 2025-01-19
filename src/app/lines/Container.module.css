@@ -23,3 +23,20 @@
     grid-template-columns: 1fr; /* 1 column on very small screens */
   }
 }
+
+.model {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.model:hover {
+  transform: scale(1.2) translateY(-10px);
+  z-index: 10;
+}
+
+/* .model.neighbor {
+  transform: scale(1.2) translateY(-6px);
+}
+
+.model.neighbor-far {
+  transform: scale(1.1);
+} */

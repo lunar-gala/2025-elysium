@@ -1,15 +1,14 @@
 .model {
-    text-align: center;
-    margin: 5px;
-    margin-top: 20%;
-  }
+  text-align: center;
+  margin: 5px;
+  margin-top: 20%;
+}
   
-  .model img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-  }
-  
-  .model p {
-    margin-top: 5px;
-  }
+.model img {
+  width: 150px;
+  object-fit: cover;
+}
+
+.model p {
+  margin-top: 5px;
+}
