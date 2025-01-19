@@ -46,6 +46,21 @@ body, html {
   height: auto;
 }
 
+/* Apply gradient to make the bottom half less opaque */
+.oval ellipse {
+  fill: none;
+  stroke: white;
+  opacity: 0.4; /* Default opacity for the top half */
+}
+
+.oval .bottom-half {
+  opacity: 1;
+  stroke: white;
+  fill: none;
+  mask-image: linear-gradient(to top, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0.1) 100%);
+  -webkit-mask-image: linear-gradient(to top, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0.1) 100%);
+}
+
 /* Circle Glow Effect */
 .glow-circle {
   fill: white;

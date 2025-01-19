@@ -93,6 +93,7 @@ const HeroSection = () => {
           preserveAspectRatio="xMidYMid meet"
         >
           <ellipse
+            className = "bottom-half"
             cx={`${cx}%`}
             cy={`${cy}%`}
             rx={`${rx}%`}
@@ -101,6 +102,22 @@ const HeroSection = () => {
             fill="none"
             opacity="0.25"
             strokeWidth="0.1"
+            strokeDasharray="100 80"  /* Adjust values to control solid vs dashed parts */
+            strokeDashoffset="100"
+          />
+          <ellipse
+            className = "bottom-half"
+            cx={`${cx}%`}
+            cy={`${cy}%`}
+            rx={`${rx}%`}
+            ry={`${ry}%`}
+            stroke="white"
+            fill="none"
+            opacity="0.25"
+            strokeWidth="0.1"
+            strokeDasharray="0.1 0.3"  /* Small dot followed by a gap */
+            strokeLinecap="round"  /* Makes dots rounded */
+
           />
           {circles.map((circle, index) => (
             <circle
