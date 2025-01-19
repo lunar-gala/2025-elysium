@@ -1,9 +1,8 @@
 "use client"
 
-export default function People() {
+import PeopleMenu from "./peopleMenu"
+export default function Template() {
   return (
-    <div>
-      People
-    </div>
+     <PeopleMenu/>
   );
 }
