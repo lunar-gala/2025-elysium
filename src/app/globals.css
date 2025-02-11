@@ -17,10 +17,15 @@
     --foreground: #ededed;
   }
 } */
+@layer base {
+  @font-face {
+    font-family: "Grey-Mono-Trial";
+    src: url("/fonts/GreyMonoLLTrialWeb-Book.woff2") format('woff');
+    font-weight: 400;
+    font-style: normal;
+  }
+}
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 body {
   color: var(--foreground);

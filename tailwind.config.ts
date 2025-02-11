@@ -1,7 +1,7 @@
 import type { Config } from "tailwindcss"
 
 
-const config: Config = {
+module.exports = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -14,11 +14,9 @@ const config: Config = {
         foreground: "var(--foreground)",
       },
       fontFamily: {
-        monoTrial: ["var(--font-grey-mono-trial)"],
+        MonoTrial: ["Grey-Mono-Trial"],
       },
     },
   },
   plugins: [],
 };
-
-export default config;
