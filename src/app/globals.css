@@ -34,8 +34,6 @@ body {
   filter:blur(0.7px);
 }
 
-
-
 body::after {
   content: "";
   position: fixed;

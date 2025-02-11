@@ -16,7 +16,8 @@
     "p5": "^1.11.2",
     "react": "19.0.0-rc-02c0e824-20241028",
     "react-dom": "19.0.0-rc-02c0e824-20241028",
-    "react-router-dom": "^7.1.0"
+    "react-router-dom": "^7.1.0",
+    "ts-config": "^20.10.0"
   },
   "devDependencies": {
     "@types/node": "^20",
