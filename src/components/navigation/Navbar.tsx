@@ -21,7 +21,8 @@ const Navbar = () => {
         {/* Left Menu */}
         <div className="flex gap-4 rounded h-full items-end flex-1 justify-end">
           <a href="/about" className={`text-white/40 hover:text-white/80 text-justify ${greyMonoTrial.className} text-[14px] font-[450] leading-normal tracking-[-0.56px]`}>About</a>
-          <a href="/people" className={`text-white/40 hover:text-white/80 text-justify ${greyMonoTrial.className} text-[14px] font-[450] leading-normal tracking-[-0.56px]`}>People</a>
+          <a href="/lines" className={`text-white/40 hover:text-white/80 text-justify ${greyMonoTrial.className} text-[14px] font-[450] leading-normal tracking-[-0.56px]`}>Lines</a>
+          <a href="/talent" className={`text-white/40 hover:text-white/80 text-justify ${greyMonoTrial.className} text-[14px] font-[450] leading-normal tracking-[-0.56px]`}>Talent</a>
         </div>
   
         {/* Centered Logo */}
@@ -32,6 +33,9 @@ const Navbar = () => {
         {/* Right Menu */}
         <div className="flex gap-4 rounded h-full items-end flex-1 justify-start">
           <a href="/merch" className={`text-white/40 hover:text-white/80 text-justify ${greyMonoTrial.className} text-[14px] font-[450] leading-normal tracking-[-0.56px]`}>Merch</a>
+          <a href="/archive" className={`text-white hover:text-white/80 text-justify ${greyMonoTrial.className} text-[14px] font-[450] leading-normal tracking-[-0.56px]`}>
+            Archive <span className="ml-1">↗</span>
+          </a>
           <a href="/tickets" className={`text-white hover:text-white/80 text-justify ${greyMonoTrial.className} text-[14px] font-[450] leading-normal tracking-[-0.56px]`}>
             Tickets <span className="ml-1">↗</span>
           </a>
