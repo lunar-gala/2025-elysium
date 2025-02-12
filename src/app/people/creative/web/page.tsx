@@ -1,9 +1,9 @@
 "use client"
-import TeamPictures from '../../teamPictures';
+// import TeamPictures from '../../teamPictures';
 export default function Template() {
   return (
     <div>
-      <TeamPictures team="WEB" department="CREATIVE" numDepartmentTeams={4} people={[
+      {/* <TeamPictures team="WEB" department="CREATIVE" numDepartmentTeams={4} people={[
         { name: 'Suyeon Cha', role: 'Co-Head of Web' },
         { name: 'Viviana Staicu', role: 'Co-Head of Web' },
         { name: 'Margaret He', role: 'Member of Web' },
@@ -13,7 +13,7 @@ export default function Template() {
         { name: 'Sophie Feng', role: 'Member of Web' },
         { name: 'Xiao Yuan', role: 'Member of Web' },
         { name: 'Lucy Wang', role: 'Member of Web' },
-  ]} />
+  ]} /> */}
     </div>
   );
 }
