@@ -25,8 +25,9 @@ export default function Home() {
     new OrbitControls(camera, renderer.domElement);
 
     // Create a cube
+    
     const geometry = new THREE.BoxGeometry(1, 1, 1);
-    const material = new THREE.MeshBasicMaterial({ color: 0xffffff });
+    const material = new THREE.MeshBasicMaterial({color: 0x555555});
     const cube = new THREE.Mesh(geometry, material);
     scene.add(cube);
     console.log(scene.children);
@@ -34,8 +35,6 @@ export default function Home() {
     const animate = () => {
       console.log("Rendering...");
       requestAnimationFrame(animate);
-      cube.rotation.x += 0.01;
-      cube.rotation.y += 0.01;
       renderer.render(scene, camera);
     };
     
