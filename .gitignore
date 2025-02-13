@@ -10,6 +10,10 @@
 !.yarn/releases
 !.yarn/versions
 
+# yon's edits
+.yarn*
+yarn*
+
 # testing
 /coverage
 
