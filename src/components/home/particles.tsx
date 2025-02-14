@@ -64,9 +64,9 @@ const InteractiveParticles = () => {
         initialPositions[i3 + 2] = positions[i3 + 2];
 
         // Initialize velocities
-        velocities[i3] = (Math.random() - 0.5) * 0.02;
-        velocities[i3 + 1] = (Math.random() - 0.5) * 0.02;
-        velocities[i3 + 2] = (Math.random() - 0.5) * 0.02;
+        velocities[i3] = (Math.random() - 0.5) * 0.001;  // Reduced from 0.02
+        velocities[i3 + 1] = (Math.random() - 0.5) * 0.002;
+        velocities[i3 + 2] = (Math.random() - 0.5) * 0.002;
 
         const distanceFromCenter = Math.sqrt(
           Math.pow(positions[i3], 2) + 
@@ -139,7 +139,7 @@ const InteractiveParticles = () => {
               }
               
               // Apply velocity and orbital motion
-              float angle = time * 0.1;
+              float angle = time * 0.05; 
               mat2 rotation = mat2(cos(angle), -sin(angle), sin(angle), cos(angle));
               vec2 rotated = rotation * pos.xz;
               pos.xz = rotated;
@@ -273,8 +273,8 @@ const InteractiveParticles = () => {
       dustSystem.material.uniforms.time.value = time;
       dustSystem.material.uniforms.mousePos.value.copy(mouseSphere.center);
 
-      starMesh.rotation.y += 0.0003;
-      dustMesh.rotation.y += 0.00015;
+      starMesh.rotation.y += 0.00001;  // Reduced from 0.0003
+      dustMesh.rotation.y += 0.000005; // Reduced from 0.00015
 
       controls.update();
       renderer.render(scene, camera);
