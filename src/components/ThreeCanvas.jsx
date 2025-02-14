@@ -16,6 +16,9 @@ const ThreeCanvas = () => {
         sketch.renderer.dispose() // Dispose of the renderer to clean up resources
         containerRef.current.removeChild(sketch.renderer.domElement) // Remove the canvas element
       }
+      if (containerRef) {
+        containerRef.removeChild(renderer.domElement);
+      }
     }
   }, [])
 
