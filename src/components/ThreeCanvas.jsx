@@ -1,25 +1,36 @@
-import { useEffect, useRef } from 'react'
+"use client"
+import React, { useRef, useEffect, useState } from 'react';
+import dynamic from 'next/dynamic';
 import Sketch from './Sketch'
 
 const ThreeCanvas = () => {
-  const containerRef = useRef(null)
+  const [Three, setThree] = useState(null);
+  const containerRef= useRef(null);
 
   useEffect(() => {
-    let sketch
-    if (containerRef.current) {
-      sketch = new Sketch({ dom: containerRef.current })
-    }
+    // Dynamically import Three.js and OrbitControls
+    const loadThree = async () => {
+      const ThreeModule = await import('three');
+      
+      setThree(ThreeModule);
+    };
+
+    loadThree();
+  }, []);
+
+  useEffect(() => {
+    if (!Three || !containerRef.current) return;
+    let sketch = new Sketch({ dom: containerRef.current })
 
     return () => {
       if (sketch) {
         sketch.isPlaying = false
-        sketch.renderer.dispose() // Dispose of the renderer to clean up resources
-        containerRef.current.removeChild(sketch.renderer.domElement) // Remove the canvas element
+        containerRef.current?.removeChild(sketch.renderer.domElement) // Remove the canvas element
       }
     }
-  }, [])
+  }, [Three])
 
-  return <div ref={containerRef} style={{ width: '100%', height: '100vh' }} />
+  return <div ref={containerRef} className="w-full h-screen" />;
 }
 
-export default ThreeCanvas
+export default ThreeCanvas;

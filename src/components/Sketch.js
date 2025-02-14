@@ -33,6 +33,9 @@ export default class Sketch {
     // let aspect = this.width / this.height;
     // this.camera = new THREE.OrthographicCamera( frustumSize * aspect / - 2, frustumSize * aspect / 2, frustumSize / 2, frustumSize / - 2, -1000, 1000 );
     this.camera.position.set(0, 0, 4)
+    this.controls = new OrbitControls(this.camera, this.renderer.domElement)
+    this.controls.enableZoom = false
+    this.controls.enablePan = false
     this.time = 0
 
     const THREE_PATH = `https://unpkg.com/three@0.${REVISION}.x`
