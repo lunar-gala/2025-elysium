@@ -27,6 +27,9 @@ const ThreeCanvas = () => {
         sketch.isPlaying = false
         containerRef.current?.removeChild(sketch.renderer.domElement) // Remove the canvas element
       }
+      if (containerRef) {
+        containerRef.removeChild(renderer.domElement);
+      }
     }
   }, [Three])
 
