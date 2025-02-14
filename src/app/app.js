@@ -67,7 +67,6 @@ export default class Sketch {
       if (intersects.length > 0) {
         let { x, y } = intersects[0].point
         this.fboMaterial.uniforms.uMouse.value = new THREE.Vector2(x, y)
-        console.log(x, y)
         this.ball.position.set(x, y, 0)
       }
     })
