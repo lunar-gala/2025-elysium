@@ -5,7 +5,7 @@ import ThreeCanvas from '@/components/ThreeCanvas'
 
 export default function Home() {
   return (
-    <div>
+    <div className="fixed top-0 left-0 w-full h-full">
       <ThreeCanvas className='absolute top-0 left-0 w-full h-full' />
     </div>
   );
