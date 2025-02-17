@@ -86,7 +86,7 @@ export default function People() {
     <div className="relative">
       <div ref={canvasRef} className="fixed top-0 left-0 w-full h-full z-0"></div>
       <div className="grid grid-cols-16 gap-[10px] ml-[20px] mt-[250px] mr-[1rem] absolute top-0 left-0 z-10">
-        <div className="col-span-2 col-start-3">
+        <div className="col-span-2 col-start-2">
           <Sidebar selected={selected} categories={categories} />
         </div>
         <div className="col-span-12 col-start-5">
