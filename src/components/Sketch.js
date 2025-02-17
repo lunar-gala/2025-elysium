@@ -36,6 +36,7 @@ export default class Sketch {
     this.controls = new OrbitControls(this.camera, this.renderer.domElement)
     this.controls.enableZoom = false
     this.controls.enablePan = false
+    this.controls.enableRotate = false
     this.time = 0
 
     const THREE_PATH = `https://unpkg.com/three@0.${REVISION}.x`
