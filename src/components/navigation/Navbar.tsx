@@ -22,7 +22,86 @@ const Navbar = () => {
     }`;
 
   return (
-    <nav className="fixed top-0 left-0 w-full h-16 z-50">
+
+    <nav className="fixed top-0 left-0 w-full h-16 z-50" style={{
+      position: 'relative',
+      background: 'linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(50, 50, 50, 0))',
+      boxShadow: 'inset 0 10px 10px rgba(0, 0, 0, 0.2)'
+  }}>
+    <div style={{
+          position: 'absolute',
+          top: '0px',
+          left: 0,
+          width: '100%',
+          height: '40px',
+          backdropFilter: 'blur(64px)', 
+          pointerEvents: 'none',
+          zIndex: -1,
+      }}></div>
+    <div style={{
+          position: 'absolute',
+          top: '0px',
+          left: 0,
+          width: '100%',
+          height: '50px',
+          backdropFilter: 'blur(32px)', 
+          pointerEvents: 'none',
+          zIndex: -1,
+      }}></div>
+    <div style={{
+          position: 'absolute',
+          top: '0px',
+          left: 0,
+          width: '100%',
+          height: '60px',
+          backdropFilter: 'blur(16px)', 
+          pointerEvents: 'none',
+          zIndex: -1,
+      }}></div>
+    <div style={{
+          position: 'absolute',
+          top: '0px',
+          left: 0,
+          width: '100%',
+          height: '70px',
+          backdropFilter: 'blur(8px)', 
+          pointerEvents: 'none',
+          zIndex: -1,
+      }}></div>
+    <div style={{
+          position: 'absolute',
+          top: '0px',
+          left: 0,
+          width: '100%',
+          height: '80px',
+          backdropFilter: 'blur(4px)', 
+          pointerEvents: 'none',
+          zIndex: -1,
+      }}></div>
+      <div style={{
+          position: 'absolute',
+          top: '0px',
+          left: 0,
+          width: '100%',
+          height: '90px',
+          backdropFilter: 'blur(2px)', 
+          pointerEvents: 'none',
+          zIndex: -1,
+      }}></div>
+      <div style={{
+          position: 'absolute',
+          top: '0px',
+          left: 0,
+          width: '100%',
+          height: '100px',
+          backdropFilter: 'blur(1px)', 
+          pointerEvents: 'none',
+          zIndex: -1,
+      }}></div>
+  
+  
+
+
       <div className="container h-full mx-auto px-4">
         <div className="flex items-end h-full relative justify-center px-12">
           {/* Left Menu */}
