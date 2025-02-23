@@ -36,7 +36,7 @@ const Navbar = () => {
           <a href="/archive" className={`text-white hover:text-white/80 text-justify ${greyMonoTrial.className} text-[14px] font-[450] leading-normal tracking-[-0.56px]`}>
             Archive <span className="ml-1">↗</span>
           </a>
-          <a href="/tickets" className={`text-white hover:text-white/80 text-justify ${greyMonoTrial.className} text-[14px] font-[450] leading-normal tracking-[-0.56px]`}>
+          <a target="_blank" href="https://carnegiemellontickets.universitytickets.com/w/event.aspx?id=2591&p=1" className={`text-white hover:text-white/80 text-justify ${greyMonoTrial.className} text-[14px] font-[450] leading-normal tracking-[-0.56px]`}>
             Tickets <span className="ml-1">↗</span>
           </a>
         </div>
