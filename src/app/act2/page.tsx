@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import Image from "next/image";
 import ThreeCanvas from '@/components/ThreeCanvas';
@@ -9,12 +9,12 @@ import localFont from "next/font/local";
 
 // Load Custom Fonts
 const greyMonoTrial = localFont({
-  src: "/fonts/GreyMonoLLTrialWeb-Book.woff2",
+  src: "../fonts/GreyMonoLLTrialWeb-Book.woff2",
   variable: "--font-grey-mono-trial",
 });
 
 const moonCrowd = localFont({
-  src: "/fonts/MOONCROWD.otf",
+  src: "../fonts/MOONCROWD.otf",
   variable: "--font-moon-crowd",
 });
 
@@ -29,18 +29,27 @@ const acts_text = [
   "You have walked far, encountering all the pitfalls and flaws of the world, exposing the flaws within you. You realize there is no true end, only acceptance."
 ];
 
-function Home() {
+function Act2Page() {
   const router = useRouter();
-  const [actIndex, setActIndex] = useState(0); // Start at Act 1 to show text
-  const [fade, setFade] = useState(false); // For fade effect
+  const [actIndex, setActIndex] = useState(2);
+  const [fade, setFade] = useState(false);
 
   useEffect(() => {
-    setFade(true); // Fade in when page loads
+    setFade(true);
+    // 🔥 Completely disable scrolling on mount
+    document.documentElement.style.overflow = "hidden";
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      // 🔥 Re-enable scrolling when unmounting
+      document.documentElement.style.overflow = "";
+      document.body.style.overflow = "";
+    };
   }, []);
 
   const navigate = (path: string) => {
-    setFade(false); // Start fade out
-    setTimeout(() => router.push(path), 500); // Navigate after fade out
+    setFade(false);
+    setTimeout(() => router.push(path), 500);
   };
 
   useEffect(() => {
@@ -60,15 +69,16 @@ function Home() {
   }, [actIndex]);
 
   return (
-    <>
-    <div className={`relative bg-black text-white h-screen flex flex-col justify-center items-center text-center overflow-hidden transition-opacity duration-500 ${fade ? "opacity-100" : "opacity-0 pointer-events-none"}`}>
-      <div className="absolute inset-0">
+    <div className={`fixed inset-0 bg-black text-white flex flex-col justify-between text-center overflow-hidden transition-opacity duration-500 ${fade ? "opacity-100" : "opacity-0"}`}>
+      
+      {/* ThreeCanvas (Ensures Fullscreen WebGL) */}
+      <div className="absolute inset-0 w-full h-full">
         <ThreeCanvas />
       </div>
 
-      {/* Act Title (Only show when actIndex is between 1-4) */}
+      {/* Act Title (Fixed at Bottom but Centered Horizontally) */}
       {actIndex >= 0 && actIndex <= 5 && (
-        <div className="absolute bottom-50 left-[50%] transform -translate-x-1/2 text-center z-10">
+        <div className="absolute bottom-50 left-1/2 transform -translate-x-1/2 text-center z-10">
           <h1 className={`text-3xl font-bold ${moonCrowd?.className || ""}`}>
             Act {actIndex}: {acts[actIndex]}
           </h1>
@@ -80,27 +90,26 @@ function Home() {
 
       {/* Bottom Navigation UI */}
       <div className="absolute bottom-10 w-full flex justify-between px-10 text-sm font-light">
-        {/* Left Label → Act IV (Embrace) */}
-        <button
-          onClick={() => navigate("/act4")}
-          className="flex items-center hover:text-gray-300 transition-all"
-        >
-          <span className="mr-2">{acts[4]}</span>
-          <div className="h-[1px] w-40 bg-gray-600"></div>
-        </button>
-
-        {/* Right Label → Act I (Emergence) */}
+        {/* Left Label → Home */}
         <button
           onClick={() => navigate("/act1")}
           className="flex items-center hover:text-gray-300 transition-all"
         >
+          <span className="mr-2">{acts[1]}</span>
           <div className="h-[1px] w-40 bg-gray-600"></div>
-          <span className="ml-2">{acts[1]}</span>
+        </button>
+
+        {/* Right Label → Act II */}
+        <button
+          onClick={() => navigate("/act3")}
+          className="flex items-center hover:text-gray-300 transition-all"
+        >
+          <div className="h-[1px] w-40 bg-gray-600"></div>
+          <span className="ml-2">{acts[3]}</span>
         </button>
       </div>
-      </div>
-    </>
+    </div>
   );
 }
 
-export default Home;
+export default Act2Page;
