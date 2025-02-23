@@ -4,7 +4,7 @@ import Link from "next/link";
 const Logo = () => {
   return (
     <Link href="/" >
-      Elysium
+      <img src="/wordmark.png" alt="Description" />
     </Link>
   );
 };
