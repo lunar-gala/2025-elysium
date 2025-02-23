@@ -59,7 +59,7 @@ export default function People() {
 
         p.draw = () => {
           displacement = p.map(p.tan(p.millis() / 3000), 0, 1, 1, 1.05);
-          p.background(0);
+          p.background(10);
           p.circle(p.mouseX, p.mouseY, 20);
           moons();
         };
@@ -85,11 +85,11 @@ export default function People() {
   return (
     <div className="relative">
       <div ref={canvasRef} className="fixed top-0 left-0 w-full h-full z-0"></div>
-      <div className="grid grid-cols-16 gap-[10px] ml-[20px] mt-[250px] mr-[1rem] absolute top-0 left-0 z-10">
-        <div className="col-span-2 col-start-2">
+      <div className="grid grid-cols-6 lg:grid-cols-16 gap-[10px] ml-[20px] mt-[250px] mr-[1rem] absolute top-0 left-0 z-10">
+        <div className="col-span-1 lg:col-span-2 lg:col-start-2">
           <Sidebar selected={selected} categories={categories} />
         </div>
-        <div className="col-span-12 col-start-5">
+        <div className="col-span-4 lg:col-span-12 col-start-3 lg:col-start-5">
           {/* <PeopleGrid setSelected={setSelected} refs={refs} categories={categories} /> */}
           <PeopleGrid refs={refs} categories={categories} />
         </div>
