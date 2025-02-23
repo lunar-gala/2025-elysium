@@ -17,7 +17,15 @@ const greyMonoTrial = localFont({
 export default function Home() {
   const [isPreloaderComplete, setIsPreloaderComplete] = useState(false);
 
+  useEffect(() => {
+    const hasSeenPreloader = sessionStorage.getItem("hasSeenPreloader");
+    if (hasSeenPreloader) {
+      setIsPreloaderComplete(true);
+    }
+  }, []);
+
   const handlePreloaderComplete = () => {
+    sessionStorage.setItem("hasSeenPreloader", "true");
     setIsPreloaderComplete(true);
   };
 
