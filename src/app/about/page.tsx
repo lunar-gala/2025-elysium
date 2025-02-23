@@ -4,17 +4,16 @@ import { useState, useEffect, useRef } from "react";
 import { useRouter } from 'next/navigation';
 import localFont from "next/font/local";
 
-
 const greyMonoTrial = localFont({
     src: "../fonts/GreyMonoLLTrialWeb-Book.woff2",
     variable: "--font-grey-mono-trial",
-  });
+});
 
 export default function About() {
     const router = useRouter(); // For Next.js
 
     const handleClick = () => {
-        router.push("/"); // Next.js navigation
+        router.back(); // Navigate back to the previously visited page
     };
 
     const canvasRef = useRef<HTMLDivElement | null>(null);
