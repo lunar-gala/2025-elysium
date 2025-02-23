@@ -59,7 +59,7 @@ export default function People() {
 
         p.draw = () => {
           displacement = p.map(p.tan(p.millis() / 3000), 0, 1, 1, 1.05);
-          p.background(10);
+          p.background(0);
           p.circle(p.mouseX, p.mouseY, 20);
           moons();
         };
