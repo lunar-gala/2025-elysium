@@ -29,7 +29,7 @@ const acts_text = [
   "You have walked far, encountering all the pitfalls and flaws of the world, exposing the flaws within you. You realize there is no true end, only acceptance."
 ];
 
-function Act3Page() {
+function Act4Page() {
   const router = useRouter();
   const [actIndex, setActIndex] = useState(4);
   const [fade, setFade] = useState(false);
@@ -112,4 +112,4 @@ function Act3Page() {
   );
 }
 
-export default Act3Page;
+export default Act4Page;
