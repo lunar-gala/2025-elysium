@@ -2,6 +2,9 @@
 import { usePathname } from "next/navigation";
 import Logo from "./Logo";
 import localFont from "next/font/local";
+import { useState } from "react";
+import { Menu, X } from "lucide-react"; // Hamburger and close icons
+
 
 const greyMonoTrial = localFont({
   src: "../../app/fonts/GreyMonoLLTrialWeb-Book.woff2",
@@ -20,6 +23,9 @@ const Navbar = () => {
     `text-white/40 hover:text-white/70 text-justify ${greyMonoTrial.className} text-[14px] font-[450] leading-normal tracking-[-0.56px] ${
       pathname === href ? "text-white/90" : ""
     }`;
+
+  const [menuOpen, setMenuOpen] = useState(false);
+
 
   return (
 
@@ -103,9 +109,15 @@ const Navbar = () => {
 
 
       <div className="container h-full mx-auto px-4">
-        <div className="flex items-end h-full relative justify-center px-12">
+        <div className="flex items-center sm:items-end h-full relative justify-center px-4 sm:px-12">
+
+        {/* Hamburger Button - Visible on Mobile */}
+        <button className="sm:hidden text-white focus:outline-none items-center" onClick={() => setMenuOpen(!menuOpen)}>
+          {!menuOpen && <Menu size={18} />}
+        </button>
+
           {/* Left Menu */}
-          <div className="flex gap-4 rounded h-full items-end flex-1 justify-end">
+          <div className="hidden sm:flex gap-4 rounded h-full items-end flex-1 justify-end">
             <a href="/about" className={linkClasses("/about")}>About</a>
             <a href="/lines" className={linkClasses("/lines")}>Lines</a>
             <a href="/talent" className={linkClasses("/talent")}>Talent</a>
@@ -113,25 +125,43 @@ const Navbar = () => {
 
           {/* Centered Logo */}
           <div
-            className={`flex ${moodCrowd.className} text-white text-[50px] font-normal leading-[30px] uppercase pl-[30px] pr-[30px] items-end drop-shadow-[0_-1px_3px_rgba(255,255,255,1)]`}
+            className={`flex ${moodCrowd.className} text-white text-[30px] sm:text-[50px] font-normal leading-[30px] uppercase pl-[30px] pr-[30px] items-end drop-shadow-[0_-1px_3px_rgba(255,255,255,1)]`}
           >
             <Logo />
           </div>
 
           {/* Right Menu */}
-          <div className="flex gap-4 rounded h-full items-end flex-1 justify-start">
+          <div className="hidden sm:flex gap-4 rounded h-full items-end flex-1 justify-start">
             <a href="/merch" className={linkClasses("/merch")}>Merch</a>
             <a href="/archive" className={linkClasses("/archive")}>
-              Archive <span className="ml-1">↗</span>
+              Archive <span className="ml-1 hidden lg:inline-block">↗</span>
             </a>
             <a
               target="_blank"
               href="https://carnegiemellontickets.universitytickets.com/w/event.aspx?id=2591&p=1"
               className={linkClasses("")} // External links don't match pathname
             >
-              Tickets <span className="ml-1">↗</span>
+              Tickets <span className="ml-1 hidden lg:inline-block">↗</span>
             </a>
           </div>
+        </div>
+      </div>
+      {/* Mobile Menu - Stacked on Left */}
+      <div
+        className={`fixed top-0 left-0 h-full w-[250px] bg-black/90 backdrop-blur-md transform ${
+          menuOpen ? "translate-x-0" : "-translate-x-full"
+        } transition-transform duration-300 ease-in-out sm:hidden`}
+      >
+        <button className="absolute top-4 right-4 text-white" onClick={() => setMenuOpen(false)}>
+          <X size={18} />
+        </button>
+        <div className="flex flex-col gap-4 mt-16 px-6">
+          <a href="/about" className={linkClasses("/about")} onClick={() => setMenuOpen(false)}>About</a>
+          <a href="/lines" className={linkClasses("/lines")} onClick={() => setMenuOpen(false)}>Lines</a>
+          <a href="/talent" className={linkClasses("/talent")} onClick={() => setMenuOpen(false)}>Talent</a>
+          <a href="/merch" className={linkClasses("/merch")} onClick={() => setMenuOpen(false)}>Merch</a>
+          <a href="/archive" className={linkClasses("/archive")} onClick={() => setMenuOpen(false)}>Archive ↗</a>
+          <a target="_blank" href="https://carnegiemellontickets.universitytickets.com/w/event.aspx?id=2591&p=1" className={linkClasses("")} onClick={() => setMenuOpen(false)}>Tickets ↗</a>
         </div>
       </div>
     </nav>
