@@ -15,6 +15,12 @@ const greyMonoTrial = localFont({
 
 
 export default function Home() {
+  const [isPreloaderComplete, setIsPreloaderComplete] = useState(false);
+
+  const handlePreloaderComplete = () => {
+    setIsPreloaderComplete(true);
+  };
+
   return (
     <div className="relative h-screen">
       <Particles />
