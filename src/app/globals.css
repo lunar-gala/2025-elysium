@@ -46,6 +46,8 @@ body::after {
   background-size: cover;
   opacity: 0.05;
   animation: grain 0.2s steps(2) infinite;
+  z-index: 999999;
+
 }
 
 @keyframes grain {
