@@ -1,7 +1,3 @@
-
-
-
-
 "use client";
 import { usePathname } from "next/navigation";
 import Logo from "./Logo";
@@ -43,7 +39,7 @@ const Navbar = () => {
           top: '0px',
           left: 0,
           width: '100%',
-          height: '40px',
+          height: '55px',
           backdropFilter: 'blur(64px)', 
           pointerEvents: 'none',
           zIndex: -1,
@@ -53,7 +49,7 @@ const Navbar = () => {
           top: '0px',
           left: 0,
           width: '100%',
-          height: '50px',
+          height: '65px',
           backdropFilter: 'blur(32px)', 
           pointerEvents: 'none',
           zIndex: -1,
@@ -63,7 +59,7 @@ const Navbar = () => {
           top: '0px',
           left: 0,
           width: '100%',
-          height: '60px',
+          height: '75px',
           backdropFilter: 'blur(16px)', 
           pointerEvents: 'none',
           zIndex: -1,
@@ -73,7 +69,7 @@ const Navbar = () => {
           top: '0px',
           left: 0,
           width: '100%',
-          height: '70px',
+          height: '85px',
           backdropFilter: 'blur(8px)', 
           pointerEvents: 'none',
           zIndex: -1,
@@ -83,7 +79,7 @@ const Navbar = () => {
           top: '0px',
           left: 0,
           width: '100%',
-          height: '80px',
+          height: '95px',
           backdropFilter: 'blur(4px)', 
           pointerEvents: 'none',
           zIndex: -1,
@@ -93,7 +89,7 @@ const Navbar = () => {
           top: '0px',
           left: 0,
           width: '100%',
-          height: '90px',
+          height: '105px',
           backdropFilter: 'blur(2px)', 
           pointerEvents: 'none',
           zIndex: -1,
@@ -103,7 +99,7 @@ const Navbar = () => {
           top: '0px',
           left: 0,
           width: '100%',
-          height: '100px',
+          height: '115px',
           backdropFilter: 'blur(1px)', 
           pointerEvents: 'none',
           zIndex: -1,
@@ -112,8 +108,8 @@ const Navbar = () => {
   
 
 
-      <div className="container h-full mx-auto px-4 mt-[20px]">
-        <div className="flex items-center sm:items-center h-full relative justify-center px-4 sm:px-12">
+      <div className="container h-full mx-auto px-4">
+        <div className="flex items-center sm:items-center h-full relative justify-center px-4 sm:px-12 top-[15px]">
 
         {/* Hamburger Button - Visible on Mobile */}
         <button className="sm:hidden text-white focus:outline-none items-center" onClick={() => setMenuOpen(!menuOpen)}>
@@ -174,4 +170,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
