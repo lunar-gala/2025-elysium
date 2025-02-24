@@ -14,6 +14,12 @@ const greyMonoTrial = localFont({
 });
 
 
+import ActOnePrticles from '@/components/ActOneParticles'
+import ActTwoPrticles from '@/components/ActTwoParticles'
+import ActThreeParticles from '@/components/ActThreeParticles'
+import ActFourParticles from '@/components/ActFourParticles'
+
+
 export default function Home() {
   const [isPreloaderComplete, setIsPreloaderComplete] = useState(false);
 
