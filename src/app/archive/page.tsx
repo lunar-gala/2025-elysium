@@ -27,12 +27,12 @@ export default function Lines() {
       {/* Box that contains both texts */}
       <div className="flex flex-col w-[30%]">
         {/* Centered "Coming Soon..." */}
-        <h1 className={`text-8xl text-center ${ultraLightItalic?.className || ""}`}>
+        <h1 className={`text-4xl sm:text-8xl text-center ${ultraLightItalic?.className || ""}`}>
           Coming Soon...
         </h1>
 
         {/* Right-Aligned "MARCH 22ND" under the "..." */}
-        <h1 className={`text-2xl text-right mt-2 pr-5 ${greyMonoTrial?.className || ""}`}>
+        <h1 className={`text-sm sm:text-2xl text-right mt-2 pr-5 ${greyMonoTrial?.className || ""}`}>
           MARCH 22ND
         </h1>
       </div>
