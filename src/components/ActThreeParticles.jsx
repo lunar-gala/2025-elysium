@@ -1,28 +1,43 @@
-import { useEffect, useRef } from 'react'
+"use client"
+import React, { useRef, useEffect, useState } from 'react';
+import dynamic from 'next/dynamic';
 import Sketch from './glslActThree/Sketch'
 
 const Act3 = () => {
-  const containerRef = useRef(null)
+  const [Three, setThree] = useState(null);
+  const containerRef = useRef(null);
+  const sketchRef = useRef(null); // Add this to store the sketch instance
 
   useEffect(() => {
-    let sketch
-    if (containerRef.current) {
-      sketch = new Sketch({ dom: containerRef.current })
-    }
+    // Dynamically import Three.js and OrbitControls
+    const loadThree = async () => {
+      const ThreeModule = await import('three');
+      setThree(ThreeModule);
+    };
+
+    loadThree();
+  }, []);
+
+  useEffect(() => {
+    if (!Three || !containerRef.current) return;
+    
+    // Store the sketch instance in the ref
+    sketchRef.current = new Sketch({ dom: containerRef.current });
 
     return () => {
-      if (sketch) {
-        sketch.isPlaying = false
-        sketch.renderer.dispose() // Dispose of the renderer to clean up resources
-        containerRef.current.removeChild(sketch.renderer.domElement) // Remove the canvas element
-      }
-      if (containerRef) {
-        containerRef.removeChild(renderer.domElement);
+      if (sketchRef.current) {
+        sketchRef.current.isPlaying = false;
+        // Check if the renderer and its DOM element exist before removing
+        if (sketchRef.current.renderer && sketchRef.current.renderer.domElement) {
+          containerRef.current?.removeChild(sketchRef.current.renderer.domElement);
+        }
+        // Clean up the sketch instance
+        sketchRef.current = null;
       }
     }
-  }, [])
+  }, [Three]);
 
-  return <div ref={containerRef} style={{ width: '100%', height: '100vh' }} />
+  return <div ref={containerRef} className="w-full h-screen" />;
 }
 
-export default Act3
+export default Act3;

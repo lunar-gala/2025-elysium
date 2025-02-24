@@ -5,13 +5,13 @@ import Sketch from './glslActTwo/Sketch'
 
 const Act2 = () => {
   const [Three, setThree] = useState(null);
-  const containerRef= useRef(null);
+  const containerRef = useRef(null);
+  const sketchRef = useRef(null); // Add this to store the sketch instance
 
   useEffect(() => {
     // Dynamically import Three.js and OrbitControls
     const loadThree = async () => {
       const ThreeModule = await import('three');
-      
       setThree(ThreeModule);
     };
 
@@ -20,18 +20,22 @@ const Act2 = () => {
 
   useEffect(() => {
     if (!Three || !containerRef.current) return;
-    let sketch = new Sketch({ dom: containerRef.current })
+    
+    // Store the sketch instance in the ref
+    sketchRef.current = new Sketch({ dom: containerRef.current });
 
     return () => {
-      if (sketch) {
-        sketch.isPlaying = false
-        containerRef.current?.removeChild(sketch.renderer.domElement) // Remove the canvas element
-      }
-      if (containerRef) {
-        containerRef.removeChild(renderer.domElement);
+      if (sketchRef.current) {
+        sketchRef.current.isPlaying = false;
+        // Check if the renderer and its DOM element exist before removing
+        if (sketchRef.current.renderer && sketchRef.current.renderer.domElement) {
+          containerRef.current?.removeChild(sketchRef.current.renderer.domElement);
+        }
+        // Clean up the sketch instance
+        sketchRef.current = null;
       }
     }
-  }, [Three])
+  }, [Three]);
 
   return <div ref={containerRef} className="w-full h-screen" />;
 }
