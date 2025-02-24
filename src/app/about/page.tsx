@@ -73,8 +73,7 @@ export default function About() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 2 }} className={`absolute w-1/2 text-justify text-white text-[16px] font-[450] leading-[120%] tracking-[-0.64px] uppercase ${greyMonoTrial.className} z-52 uppercase`}>
-                Lunar Gala 2025 ELYSIUM explores the idea of a neverending story. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                We all take our own path in life in order to find our final destination, our happiness. That path looks different for everybody, as there are ups and downs, lessons to learn, and the different treasures we pick up on the way. Elysium, draws from the idea of a journey—personal, unpredictable, and transformative. Like the winding, serpentine paths we navigate in life, this journey is filled with moments of reflection, trials, and triumphs. Each individual’s path to their own ultimate bliss is unique, shaped by both the highs and the lows, the challenges and the discoveries along the way.
             </motion.div>
         </div>
       );
