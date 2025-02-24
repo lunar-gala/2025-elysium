@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import localFont from "next/font/local";
+import { motion } from "framer-motion";
 
 // Load Custom Fonts
 const greyMonoTrial = localFont({
@@ -25,7 +26,11 @@ export default function Lines() {
   return (
     <div className="fixed inset-0 flex flex-col justify-center items-center bg-black text-white">
       {/* Box that contains both texts */}
-      <div className="flex flex-col w-[30%]">
+      <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 1 }} className="flex flex-col w-[30%]">
         {/* Centered "Coming Soon..." */}
         <h1 className={`text-4xl sm:text-8xl text-center ${ultraLightItalic?.className || ""}`}>
           Coming Soon...
@@ -35,7 +40,7 @@ export default function Lines() {
         <h1 className={`text-sm sm:text-2xl text-right mt-2 pr-5 ${greyMonoTrial?.className || ""}`}>
           MARCH 22ND
         </h1>
-      </div>
+      </motion.div>
     </div>
   );
 }
