@@ -81,11 +81,6 @@ export default function Home() {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, []);
 
-  const handlePreloaderComplete = () => {
-    sessionStorage.setItem("hasSeenPreloader", "true");
-    setIsPreloaderComplete(true);
-  };
-
   return (
     <div className="h-screen w-full overflow-hidden relative">
       
