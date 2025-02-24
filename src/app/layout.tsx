@@ -37,7 +37,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${greyMonoTrial.variable} ${geistMono.variable} antialiased overflow-x-hidden`}
       >
         <div className="h-screen flex flex-col">
-          <Navigation />
+          {/* <Navigation /> */}
           <MainContent>
             {children}
           </MainContent>
