@@ -122,7 +122,7 @@ const Navbar = () => {
         </button>
 
           {/* Left Menu */}
-          <div className="hidden sm:flex gap-4 rounded h-full items-end flex-1 justify-end">
+          <div className="hidden sm:flex gap-4 rounded h-full items-center flex-1 justify-end">
             <a href="/about" className={linkClasses("/about")}>About</a>
             <a href="/lines" className={linkClasses("/lines")}>Lines</a>
             <a href="/talent" className={linkClasses("/talent")}>Talent</a>
@@ -137,7 +137,7 @@ const Navbar = () => {
 
 
           {/* Right Menu */}
-          <div className="hidden sm:flex gap-4 rounded h-full items-end flex-1 justify-start">
+          <div className="hidden sm:flex gap-4 rounded h-full items-center flex-1 justify-start">
             <a href="/merch" className={linkClasses("/merch")}>Merch</a>
             <a href="/archive" className={linkClasses("/archive")}>
               Archive <span className="ml-1 hidden lg:inline-block">↗</span>
