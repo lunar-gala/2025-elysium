@@ -98,7 +98,7 @@ export default function Home() {
       </div>
 
       {/* Bottom Navigation UI */}
-      <div className="absolute bottom-20 w-full flex justify-between px-4 md:px-8 text-sm font-light">
+      <div className="absolute bottom-20 w-full flex justify-between px-4 md:px-[3vw] text-sm font-light">
         {/* Left Navigation */}
         <button
           onMouseEnter={() => setLeftIsHovered(true)}
@@ -118,7 +118,14 @@ export default function Home() {
               transform: isLeftHovered ? "translateX(0%)" : "translateX(300%)",
             }}
           />
+          {/* MIDDLE LINE */}
+        <div className="absolute left-1/2 transform -translate-x-1/2 w-full flex justify-center">
+          <div className="h-[0.5px] w-[62vw] md:w-[55vw] bg-gray-600"></div>
+        </div>
         </button>
+
+        
+        
 
         {/* MIDDLE UI */}
         <div className="flex items-center justify-around w-1/3 px-2 md:px-4">
