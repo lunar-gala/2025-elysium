@@ -23,6 +23,7 @@ const VideoPreloader = ({ onComplete }) => {
       <video
         className="min-w-full h-auto"
         autoPlay
+        playsInline
         muted
         onEnded={handleVideoEnd}
         type="video/mp4"
