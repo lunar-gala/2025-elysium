@@ -1,7 +1,7 @@
 "use client"
 import React, { useRef, useEffect, useState } from 'react';
 import dynamic from 'next/dynamic';
-import Sketch from './glslActOne/Sketch'
+import Sketch from './glslActThree/Sketch'
 
 const ThreeCanvas = () => {
   const [Three, setThree] = useState(null);
