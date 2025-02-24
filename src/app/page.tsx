@@ -47,6 +47,11 @@ export default function Home() {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, []);
 
+  const handlePreloaderComplete = () => {
+    sessionStorage.setItem("hasSeenPreloader", "true");
+    setIsPreloaderComplete(true);
+  };
+
   return (
     <div className="relative h-screen">
       <Particles />
@@ -58,3 +63,7 @@ export default function Home() {
     </div>
   );
 }
+
+// Helper functions for cycling indices
+const nextIndex = (current: number) => (current === 4 ? 0 : current);
+const prevIndex = (current: number) => (current === 1 ? 3 : current - 2);
