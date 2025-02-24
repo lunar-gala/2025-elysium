@@ -35,7 +35,6 @@ const Navbar = () => {
 
     <nav className="fixed top-0 left-0 w-full h-16 z-50" style={{
       position: 'relative',
-      top:'20px',
       background: 'linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(50, 50, 50, 0))',
       boxShadow: 'inset 0 10px 10px rgba(0, 0, 0, 0.2)'
   }}>
@@ -113,7 +112,7 @@ const Navbar = () => {
   
 
 
-      <div className="container h-full mx-auto px-4">
+      <div className="container h-full mx-auto px-4 mt-[20px]">
         <div className="flex items-center sm:items-center h-full relative justify-center px-4 sm:px-12">
 
         {/* Hamburger Button - Visible on Mobile */}
