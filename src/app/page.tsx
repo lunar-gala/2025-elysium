@@ -28,13 +28,21 @@ const lines = [["line1", "line2"], ["line3", "line4"]]
 
 // Function to get the correct ActParticles component
 const getActParticles = (index: number) => {
-  switch (index) {
-    case 1: return <Act1 />;
-    case 2: return <Act2 />;
-    case 3: return <Act3 />;
-    case 4: return <Act4 />;
-    default: return <Act2 />; 
-  }
+  const Component = (() => {
+    switch (index) {
+      case 1: return Act1;
+      case 2: return Act2;
+      case 3: return Act3;
+      case 4: return Act4;
+      default: return Act2;
+    }
+  })();
+
+  return (
+    <div className="transform -translate-y-10">
+      <Component />
+    </div>
+  );
 };
 
 export default function Home() {
@@ -73,21 +81,24 @@ export default function Home() {
   };
 
   return (
-    <div>
+    <div className="h-screen w-full overflow-hidden relative">
+      
       {!isPreloaderComplete && <VideoPreloader onComplete={handlePreloaderComplete} />}
       <AnimatePresence mode="wait">
         {isPreloaderComplete && getActParticles(actIndex)}
       </AnimatePresence>
+      
+      
 
       {/* Act Title */}
-      <div className="absolute bottom-50 left-1/2 transform -translate-x-1/2 text-center z-10">
+      <div className="absolute bottom-45 left-1/2 transform -translate-x-1/2 text-center z-10">
         <h1 className={`text-3xl ${ultraLight?.className || ""}`}>
           Act {romanNumerals[actIndex - 1]}: {acts[actIndex - 1]}
         </h1>
       </div>
 
       {/* Bottom Navigation UI */}
-      <div className="absolute bottom-10 w-full flex justify-between px-4 md:px-8 text-sm font-light">
+      <div className="absolute bottom-20 w-full flex justify-between px-4 md:px-8 text-sm font-light">
         {/* Left Navigation */}
         <button
           onMouseEnter={() => setLeftIsHovered(true)}

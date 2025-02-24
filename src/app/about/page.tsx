@@ -71,11 +71,13 @@ export default function About() {
             <div ref={canvasRef} className="fixed top-0 left-0 w-full h-full z-0"></div>
             <div className="absolute top-0 left-0 w-full h-full bg-opacity-10 bg-[rgba(47,54,79,0.40)] backdrop-blur-xs z-51"></div>
             <motion.div 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 2 }} className={`absolute w-1/2 text-justify text-white text-[16px] font-[450] leading-[120%] tracking-[-0.64px] uppercase ${greyMonoTrial.className} z-52 uppercase`}>
-                We all take our own path in life in order to find our final destination, our happiness. That path looks different for everybody, as there are ups and downs, lessons to learn, and the different treasures we pick up on the way. Elysium, draws from the idea of a journey—personal, unpredictable, and transformative. Like the winding, serpentine paths we navigate in life, this journey is filled with moments of reflection, trials, and triumphs. Each individual’s path to their own ultimate bliss is unique, shaped by both the highs and the lows, the challenges and the discoveries along the way.
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 2 }} 
+                className={`absolute w-[90%] md:w-1/2 text-justify text-white text-[13px] md:text-[14px] lg:text-[16px] font-[450] leading-[120%] tracking-[-0.64px]  ${greyMonoTrial.className} z-52  px-4 md:px-0`}
+            >
+                We all take our own path in life in order to find our final destination, our happiness. That path looks different for everybody, as there are ups and downs, lessons to learn, and the different treasures we pick up on the way. Elysium, draws from the idea of a journey - personal, unpredictable, and transformative. Like the winding, serpentine paths we navigate in life, this journey is filled with moments of reflection, trials, and triumphs. Each individual’s path to their own ultimate bliss is unique, shaped by both the highs and the lows, the challenges and the discoveries along the way.
             </motion.div>
         </div>
     );
