@@ -24,6 +24,7 @@ const ultraLight = localFont({
 // Define acts and Roman numerals (1-based index)
 const romanNumerals = ["I", "II", "III", "IV"];
 const acts = ["Emergence", "Blossom", "Hubris", "Embrace"];
+const lines = [["line1", "line2"], ["line3", "line4"]]
 
 // Function to get the correct ActParticles component
 const getActParticles = (index: number) => {
@@ -86,7 +87,7 @@ export default function Home() {
       </div>
 
       {/* Bottom Navigation UI */}
-      <div className="absolute bottom-10 w-full flex justify-between px-10 text-sm font-light">
+      <div className="absolute bottom-10 w-full flex justify-between px-4 md:px-8 text-sm font-light">
         {/* Left Navigation */}
         <button
           onMouseEnter={() => setLeftIsHovered(true)}
@@ -95,34 +96,31 @@ export default function Home() {
           className="flex items-center hover:text-gray-300 transition-all"
         > 
           <div className="relative flex items-center">
-            <span className={`absolute left-0 transform translate-y-[-20px] ${greyMonoTrial.className}`}>
+            <span className={`absolute left-0 transform translate-y-[-20px] uppercase ${greyMonoTrial.className}`}>
               {acts[prevIndex(actIndex)]}
             </span>
-            <div className="h-[0.5px] w-[268px] bg-gray-600"></div>
+            <div className="h-[0.5px] w-[15vw] md:w-[20vw] bg-gray-600"></div>
           </div>
           <div
-            className={`h-[1px] bg-white absolute transition-all duration-300`}
+            className={`h-[1px] w-[4vw] md:w-[5vw] bg-white absolute transition-all duration-300`}
             style={{
-              transform: isLeftHovered ? "translateX(0%)" : "translateX(346%)",
-              width: "60px",
+              transform: isLeftHovered ? "translateX(0%)" : "translateX(300%)",
             }}
           />
         </button>
 
         {/* MIDDLE UI */}
-        <div className="flex justify-center items-center"></div>
-        
-        <div className="flex items-center justify-around w-full px-[10rem]">
+        <div className="flex items-center justify-around w-1/3 px-2 md:px-4">
           {/* bounding box for tick */}
-          <div className="group  w-[2vw] h-[2vw] flex items-center justify-around"
+          <div className="group w-[2vw] h-[2vw] flex items-center justify-around"
             onMouseEnter={() => setModelLineHovered1(true)}
             onMouseLeave={() => setModelLineHovered1(false)}
           >
             <div
-              className={`h-[12px] w-[1px] text-center z-10 transition-transform duration-200 bg-gray-600 group-hover:bg-gray-100`}
+              className={`h-[12px] w-[1px] text-center z-10 transition-all duration-200 ${isModelLineHovered1 ? 'bg-white' : 'bg-gray-600'}`}
               style={{
-                transform: isModelLineHovered1 ? "rotate(90deg)" : "rotate(0deg)", // Rotate 90 degrees
-                transition: "transform 0.2s cubic-bezier(.55,-0.03,.03,1.04)", // Smooth transition
+                transform: isModelLineHovered1 ? "rotate(90deg)" : "rotate(0deg)",
+                transition: "all 0.2s cubic-bezier(.55,-0.03,.03,1.04)",
               }}
             ></div>
           </div>
@@ -131,22 +129,22 @@ export default function Home() {
             onMouseLeave={() => setModelLineHovered2(false)}
           >
             <div
-              className={`h-[12px] w-[1px] text-center z-10 transition-transform duration-200 bg-gray-600 group-hover:bg-gray-100`}
+              className={`h-[12px] w-[1px] text-center z-10 transition-all duration-200 ${isModelLineHovered2 ? 'bg-white' : 'bg-gray-600'}`}
               style={{
-                transform: isModelLineHovered2 ? "rotate(90deg)" : "rotate(0deg)", // Rotate 90 degrees
-                transition: "transform 0.2s cubic-bezier(.55,-0.03,.03,1.04)", // Smooth transition
+                transform: isModelLineHovered2 ? "rotate(90deg)" : "rotate(0deg)",
+                transition: "all 0.2s cubic-bezier(.55,-0.03,.03,1.04)",
               }}
             ></div>
           </div>
-          <div className="group  w-[2vw] h-[2vw] flex items-center justify-around"
+          <div className="group w-[2vw] h-[2vw] flex items-center justify-around"
             onMouseEnter={() => setModelLineHovered3(true)}
             onMouseLeave={() => setModelLineHovered3(false)}
           >
             <div
-              className={`h-[12px] w-[1px] text-center z-10 transition-transform duration-200 bg-gray-600 group-hover:bg-gray-100`}
+              className={`h-[12px] w-[1px] text-center z-10 transition-all duration-200 ${isModelLineHovered3 ? 'bg-white' : 'bg-gray-600'}`}
               style={{
-                transform: isModelLineHovered3 ? "rotate(90deg)" : "rotate(0deg)", // Rotate 90 degrees
-                transition: "transform 0.2s cubic-bezier(.55,-0.03,.03,1.04)", // Smooth transition
+                transform: isModelLineHovered3 ? "rotate(90deg)" : "rotate(0deg)",
+                transition: "all 0.2s cubic-bezier(.55,-0.03,.03,1.04)",
               }}
             ></div>
           </div>
@@ -160,16 +158,15 @@ export default function Home() {
           className="flex items-center hover:text-gray-300 transition-all"
         >
           <div className="relative flex items-center">
-            <span className={`absolute right-0 transform translate-y-[-20px] ${greyMonoTrial.className}`}>
+            <span className={`absolute right-0 transform translate-y-[-20px] uppercase ${greyMonoTrial.className}`}>
               {acts[nextIndex(actIndex)]}
             </span>
-            <div className="h-[0.5px] w-[268px] bg-gray-600"></div>
+            <div className="h-[0.5px] w-[15vw] md:w-[20vw] bg-gray-600"></div>
           </div>
           <div
-            className={`h-[1px] bg-white absolute transition-all duration-300`}
+            className={`h-[1px] w-[4vw] md:w-[5vw] bg-white absolute transition-all duration-300`}
             style={{
-              transform: isRightHovered ? "translateX(346%)" : "translateX(0%)",
-              width: "60px", 
+              transform: isRightHovered ? "translateX(300%)" : "translateX(0%)",
             }}
           />
         </button>
