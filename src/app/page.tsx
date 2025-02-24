@@ -1,8 +1,13 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import ThreeCanvas from "@/components/ThreeCanvas";
 import VideoPreloader from "@/components/VideoPreloader";
+
+import ActOnePrticles from '@/components/ActOneParticles'
+import ActTwoPrticles from '@/components/ActTwoParticles'
+import ActThreeParticles from '@/components/ActThreeParticles'
+import ActFourParticles from '@/components/ActFourParticles'
+
 
 export default function Home() {
   const [isPreloaderComplete, setIsPreloaderComplete] = useState(false);
@@ -24,7 +29,8 @@ export default function Home() {
       {!isPreloaderComplete && (
         <VideoPreloader onComplete={handlePreloaderComplete} />
       )}
-      {isPreloaderComplete && <ThreeCanvas />}
+      
+      {isPreloaderComplete && <ActTwoPrticles />}
     </div>
   );
 }
