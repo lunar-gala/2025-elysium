@@ -3,7 +3,7 @@ import React, { useRef, useEffect, useState } from 'react';
 import dynamic from 'next/dynamic';
 import Sketch from './glslActOne/Sketch'
 
-const ThreeCanvas = () => {
+const Act1 = () => {
   const [Three, setThree] = useState(null);
   const containerRef= useRef(null);
 
@@ -36,4 +36,4 @@ const ThreeCanvas = () => {
   return <div ref={containerRef} className="w-full h-screen" />;
 }
 
-export default ThreeCanvas;
+export default Act1;
