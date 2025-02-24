@@ -24,6 +24,9 @@ export default function Home() {
   const [actIndex, setActIndex] = useState(0);
   const [isLeftHovered, setLeftIsHovered] = useState(false); 
   const [isRightHovered, setRightIsHovered] = useState(false); 
+  const [isModelLineHovered1, setModelLineHovered1] = useState(false); 
+  const [isModelLineHovered2, setModelLineHovered2] = useState(false); 
+  const [isModelLineHovered3, setModelLineHovered3] = useState(false); 
   const [isPreloaderComplete, setIsPreloaderComplete] = useState(false);
 
   useEffect(() => {
