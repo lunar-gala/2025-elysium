@@ -1,15 +1,13 @@
 import * as THREE from 'three'
 import { REVISION } from 'three'
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
 import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader.js'
 import fragment from './shader/fragment.glsl'
 import vertex from './shader/vertexParticles.glsl'
-
 import simFragment from './shader/simFragment.glsl'
 import simVertex from './shader/simVertex.glsl'
-import GUI from 'lil-gui'
-import gsap from 'gsap'
+// import GUI from 'lil-gui'
+// import gsap from 'gsap'
 
 export default class Sketch {
   constructor(options) {
@@ -34,7 +32,6 @@ export default class Sketch {
     // let aspect = this.width / this.height;
     // this.camera = new THREE.OrthographicCamera( frustumSize * aspect / - 2, frustumSize * aspect / 2, frustumSize / 2, frustumSize / - 2, -1000, 1000 );
     this.camera.position.set(0, 0, 4)
-    this.controls = new OrbitControls(this.camera, this.renderer.domElement)
     this.time = 0
 
     const THREE_PATH = `https://unpkg.com/three@0.${REVISION}.x`
@@ -237,7 +234,3 @@ export default class Sketch {
     // this.renderer.render(this.fboScene, this.fboCamera);
   }
 }
-
-new Sketch({
-  dom: document.getElementById('container'),
-})

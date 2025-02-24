@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react'
-import Sketch from './Sketch'
+import Sketch from './glslActThree/Sketch'
 
-const ThreeCanvas = () => {
+const ActTwoThreeCanvas = () => {
   const containerRef = useRef(null)
 
   useEffect(() => {
@@ -25,4 +25,4 @@ const ThreeCanvas = () => {
   return <div ref={containerRef} style={{ width: '100%', height: '100vh' }} />
 }
 
-export default ThreeCanvas
+export default ActTwoThreeCanvas
