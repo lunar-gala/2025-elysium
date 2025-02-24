@@ -28,7 +28,10 @@ const VideoPreloader = ({ onComplete }) => {
         onEnded={handleVideoEnd}
         type="video/mp4"
       >
-        <source src="/preloader.mp4" type="video/mp4" />
+        <source
+          src="https://res.cloudinary.com/ddjxpkewq/video/upload/f_auto:video,q_auto/v1/lg/uelohmn4ldqfkuldngoo"
+          type="video/mp4"
+        />
         Your browser does not support the video tag.
       </video>
     </div>

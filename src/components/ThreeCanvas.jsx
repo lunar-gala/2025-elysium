@@ -33,7 +33,7 @@ const ThreeCanvas = () => {
     }
   }, [Three])
 
-  return <div ref={containerRef} className="w-full h-screen" />;
+  return <div className="w-full h-screen" />;
 }
 
 export default ThreeCanvas;
