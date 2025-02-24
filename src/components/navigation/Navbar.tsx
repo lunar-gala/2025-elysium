@@ -1,7 +1,3 @@
-
-
-
-
 "use client";
 import { usePathname } from "next/navigation";
 import Logo from "./Logo";
@@ -95,4 +91,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
