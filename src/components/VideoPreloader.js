@@ -19,9 +19,9 @@ const VideoPreloader = ({ onComplete }) => {
   }
 
   return (
-    <div className="fixed inset-0 w-full h-full z-50 bg-black" onClick={handleSkip}>
+    <div className="fixed inset-0 z-50 bg-black flex items-center justify-center overflow-hidden" onClick={handleSkip}>
       <video
-        className="w-full h-full object-cover"
+        className="min-w-full h-auto"
         autoPlay
         muted
         onEnded={handleVideoEnd}
