@@ -21,6 +21,9 @@ import ActFourParticles from '@/components/ActFourParticles'
 
 
 export default function Home() {
+  const [actIndex, setActIndex] = useState(0);
+  const [isLeftHovered, setLeftIsHovered] = useState(false); 
+  const [isRightHovered, setRightIsHovered] = useState(false); 
   const [isPreloaderComplete, setIsPreloaderComplete] = useState(false);
 
   useEffect(() => {
@@ -28,6 +31,20 @@ export default function Home() {
     if (hasSeenPreloader) {
       setIsPreloaderComplete(true);
     }
+  }, []);
+
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "ArrowRight") {
+        setActIndex(prev => (prev + 1) % 5);
+      }
+      if (event.key === "ArrowLeft") {
+        setActIndex(prev => (prev - 1 + 5) % 5);
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
   }, []);
 
   const handlePreloaderComplete = () => {
