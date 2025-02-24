@@ -23,6 +23,9 @@ export default function Home() {
   const [actIndex, setActIndex] = useState(0);
   const [isLeftHovered, setLeftIsHovered] = useState(false); 
   const [isRightHovered, setRightIsHovered] = useState(false); 
+  const [isModelLineHovered1, setModelLineHovered1] = useState(false); 
+  const [isModelLineHovered2, setModelLineHovered2] = useState(false); 
+  const [isModelLineHovered3, setModelLineHovered3] = useState(false); 
   const [isPreloaderComplete, setIsPreloaderComplete] = useState(false);
 
   useEffect(() => {
@@ -70,7 +73,6 @@ export default function Home() {
       {/* Bottom Navigation UI */}
       <div className="absolute bottom-10 w-full flex justify-between px-10 text-sm font-light">
         {/* Left Label → Home */}
-
         <button
           onMouseEnter={() => setLeftIsHovered(true)}  // Set to true when mouse enters
           onMouseLeave={() => setLeftIsHovered(false)} // Set to false when mouse leaves
@@ -79,7 +81,7 @@ export default function Home() {
         > 
           <div className="relative flex items-center">
             <span className="absolute left-0 transform translate-y-[-20px]">{acts[(actIndex - 1 + 5) % 5]}</span>
-            <div className="h-[0.5px] w-[268px] bg-gray-600"></div>
+            <div className="h-[0.5px] w-[16.75rem] bg-gray-600"></div>
           </div>
           <div
             className={`h-[1px] bg-white absolute transition-all duration-300`}
@@ -90,8 +92,50 @@ export default function Home() {
           />
         </button>
 
-        {/* Right Label → Act II */}
+        {/* MIDDLE UI */}
+        <div className="flex justify-center items-center"></div>
+        
+        <div className="flex items-center justify-around w-full px-[10rem]">
+          {/* bounding box for tick */}
+          <div className="group  w-[2vw] h-[2vw] flex items-center justify-around"
+            onMouseEnter={() => setModelLineHovered1(true)}
+            onMouseLeave={() => setModelLineHovered1(false)}
+          >
+            <div
+              className={`h-[12px] w-[1px] text-center z-10 transition-transform duration-200 bg-gray-600 group-hover:bg-gray-100`}
+              style={{
+                transform: isModelLineHovered1 ? "rotate(90deg)" : "rotate(0deg)", // Rotate 90 degrees
+                transition: "transform 0.2s cubic-bezier(.55,-0.03,.03,1.04)", // Smooth transition
+              }}
+            ></div>
+          </div>
+          <div className="group w-[2vw] h-[2vw] flex items-center justify-around"
+            onMouseEnter={() => setModelLineHovered2(true)}
+            onMouseLeave={() => setModelLineHovered2(false)}
+          >
+            <div
+              className={`h-[12px] w-[1px] text-center z-10 transition-transform duration-200 bg-gray-600 group-hover:bg-gray-100`}
+              style={{
+                transform: isModelLineHovered2 ? "rotate(90deg)" : "rotate(0deg)", // Rotate 90 degrees
+                transition: "transform 0.2s cubic-bezier(.55,-0.03,.03,1.04)", // Smooth transition
+              }}
+            ></div>
+          </div>
+          <div className="group  w-[2vw] h-[2vw] flex items-center justify-around"
+            onMouseEnter={() => setModelLineHovered3(true)}
+            onMouseLeave={() => setModelLineHovered3(false)}
+          >
+            <div
+              className={`h-[12px] w-[1px] text-center z-10 transition-transform duration-200 bg-gray-600 group-hover:bg-gray-100`}
+              style={{
+                transform: isModelLineHovered3 ? "rotate(90deg)" : "rotate(0deg)", // Rotate 90 degrees
+                transition: "transform 0.2s cubic-bezier(.55,-0.03,.03,1.04)", // Smooth transition
+              }}
+            ></div>
+          </div>
+        </div>
 
+        {/* Right Label → Act II */}
         <button
           onMouseEnter={() => setRightIsHovered(true)}  // Set to true when mouse enters
           onMouseLeave={() => setRightIsHovered(false)} // Set to false when mouse leaves
