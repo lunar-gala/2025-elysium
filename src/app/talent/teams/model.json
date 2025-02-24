@@ -1,0 +1,87 @@
+[
+    {
+      "name": "Mildred Amofa",
+      "position": "Head of Model",
+      "imagePath": "headshots/Mildred Amofa.jpg"
+    },
+    {
+      "name": "Marissa Fernandez",
+      "position": "Model Coordinator",
+      "imagePath": "headshots/Marissa Fernandez.jpg"
+    },
+    {
+      "name": "Elizabeth Hager",
+      "position": "Model Coordinator",
+      "imagePath": "headshots/Elizabeth Hager.jpg"
+    },
+    {
+      "name": "Banke Yiadom",
+      "position": "Model Coordinator",
+      "imagePath": "headshots/Banke Yiadom.jpg"
+    },
+    {
+      "name": "Daniel Baytin",
+      "position": "Model",
+      "imagePath": "headshots/Daniel Baytin.jpg"
+    },
+    {
+      "name": "Destini Brown-Greene",
+      "position": "Model",
+      "imagePath": "headshots/Destini Brown-Greene.jpg"
+    },
+    {
+      "name": "Alex Chen",
+      "position": "Model",
+      "imagePath": "headshots/Alex Chen.jpg"
+    },
+    {
+      "name": "Lily Du",
+      "position": "Model",
+      "imagePath": "headshots/Lily Du.jpg"
+    },
+    {
+      "name": "Opalina Khanna",
+      "position": "Model",
+      "imagePath": "headshots/Opalina Khanna.jpg"
+    },
+    {
+      "name": "Caroline La Piana",
+      "position": "Model",
+      "imagePath": "headshots/Caroline La Piana.jpg"
+    },
+    {
+      "name": "Frank Liu",
+      "position": "Model",
+      "imagePath": "headshots/Frank Liu.jpg"
+    },
+    {
+      "name": "Lorelei Ohnishi",
+      "position": "Model",
+      "imagePath": "headshots/Lorelei Ohnishi.jpg"
+    },
+    {
+      "name": "Sally Pak",
+      "position": "Model, Head of Finance, Head of PR",
+      "imagePath": "headshots/Sally Pak.jpg"
+    },
+    {
+      "name": "Julieta Ruiz Vega",
+      "position": "Model",
+      "imagePath": "headshots/Julieta Ruiz Vega.jpg"
+    },
+    {
+      "name": "Vicky Yan",
+      "position": "Model",
+      "imagePath": "headshots/Vicky Yan.jpg"
+    },
+    {
+      "name": "Jenny Yang",
+      "position": "Model",
+      "imagePath": "headshots/Jenny Yang.jpg"
+    },
+    {
+      "name": "Tiffany Zhan",
+      "position": "Model",
+      "imagePath": "headshots/Tiffany Zhan.jpg"
+    }
+  ]
