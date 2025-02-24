@@ -45,6 +45,12 @@ const getActParticles = (index: number) => {
   );
 };
 
+import ActOnePrticles from '@/components/ActOneParticles'
+import ActTwoPrticles from '@/components/ActTwoParticles'
+import ActThreeParticles from '@/components/ActThreeParticles'
+import ActFourParticles from '@/components/ActFourParticles'
+
+
 export default function Home() {
   const [actIndex, setActIndex] = useState(1);
   const [isLeftHovered, setLeftIsHovered] = useState(false); 
