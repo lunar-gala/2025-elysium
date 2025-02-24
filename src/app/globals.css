@@ -7,7 +7,7 @@
 
 
 :root {
-  --background: #0a0a0a;
+  --background: #000000;
   --foreground: #ededed;
 }
 
@@ -31,7 +31,7 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
-  filter:blur(0.5px);
+  filter:blur(0.25px);
 }
 
 body::after {
@@ -46,9 +46,19 @@ body::after {
   background-size: cover;
   opacity: 0.05;
   animation: grain 0.2s steps(2) infinite;
+  z-index: 999999;
+
 }
 
 @keyframes grain {
   0% { background-position: 0 0; }
   100% { background-position: 100px 100px; }
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  touch-action: none;
 }
