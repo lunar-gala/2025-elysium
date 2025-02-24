@@ -7,13 +7,14 @@ import { useIsVisible } from "./utils/intersecting";
 import { motion } from "framer-motion";
 
 const categories = [
+  "Producers",
   "Creative",
   "Design",
-  "Dance",
-  "Hair & Makeup",
-  "Production",
-  "Public Relations",
   "Model",
+  "Public Relations",
+  "Production",
+  "Hair & Makeup",
+  "Dance",
 ];
 
 export default function Talent() {

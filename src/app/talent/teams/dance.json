@@ -1,0 +1,12 @@
+[
+    {
+        "name": "Infra Dance Company",
+        "position": "Dance Team",
+        "imagePath": "headshots/Infra Dance Company.jpg"
+    },
+    {
+        "name": "SoulStylz",
+        "position": "Dance Team",
+        "imagePath": "headshots/SoulStylz.jpg"
+    }
+]

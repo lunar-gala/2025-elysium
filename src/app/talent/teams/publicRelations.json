@@ -1,0 +1,57 @@
+[
+    {
+        "name": "Angela Huang",
+        "position": "Head of PR",
+        "imagePath": "headshots/Angela Huang.jpg"
+    },
+    {
+        "name": "Stephanie Kim",
+        "position": "Subhead of PR",
+        "imagePath": "headshots/Stephanie Kim.jpg"
+    },
+    {
+        "name": "Aanika Schueler",
+        "position": "Subhead of PR",
+        "imagePath": "headshots/Aanika Schueler.jpg"
+    },
+    {
+        "name": "Olivia Acquaah-Harrison",
+        "position": "PR Team Member",
+        "imagePath": "headshots/Olivia Acquaah-Harrison.jpg"
+    },
+    {
+        "name": "Susan Chen",
+        "position": "PR Team Member",
+        "imagePath": "headshots/Susan Chen.jpg"
+    },
+    {
+        "name": "Cassie May",
+        "position": "PR Team Member",
+        "imagePath": "headshots/Cassie May.jpg"
+    },
+    {
+        "name": "Alycen Kim",
+        "position": "PR Team Member",
+        "imagePath": "headshots/Alycen Kim.jpg"
+    },
+    {
+        "name": "Isha Patel",
+        "position": "PR Team Member",
+        "imagePath": "headshots/Isha Patel.jpg"
+    },
+    {
+        "name": "Angie Reyes",
+        "position": "PR Team Member",
+        "imagePath": "headshots/Angie Reyes.jpg"
+    },
+    {
+        "name": "Carolyn Wei",
+        "position": "PR Team Member",
+        "imagePath": "headshots/Carolyn Wei.jpg"
+    },
+    {
+        "name": "Tom Zhang",
+        "position": "PR Team Member",
+        "imagePath": "headshots/Tom Zhang.jpg"
+    }
+]
