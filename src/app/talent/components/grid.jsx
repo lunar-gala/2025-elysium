@@ -14,10 +14,10 @@ const PeopleGrid = ({ refs, categories }) => {
     return (
         <div>
         {categories.map((category) => (
-            <div key={category} id={category} ref={refs[category]} className="mb-[250px] scroll-mt-[250px]">
-            <div className="grid grid-cols-12 gap-[10px]">
+            <div key={category} id={category} ref={refs[category]} className="mb-[250px] scroll-mt-[250px] mr-[40px]">
+            <div className="grid grid-cols-2 sm:grid-cols-12 gap-[10px]">
                 {people.map((person, index) => (
-                <div key={index} className="justify-left col-span-3">
+                <div key={index} className="justify-left col-span-1 sm:col-span-3">
                     <img src="sample_img.png" alt={person.name} className="w-full" />
                     <p className={`mt-2 text-white text-opacity-40 text-justify ${greyMonoTrial.className} text-sm 
             font-medium leading-[16.8px] 
