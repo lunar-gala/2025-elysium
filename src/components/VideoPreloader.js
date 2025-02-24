@@ -25,6 +25,7 @@ const VideoPreloader = ({ onComplete }) => {
         autoPlay
         muted
         onEnded={handleVideoEnd}
+        type="video/mp4"
       >
         <source src="/preloader.mp4" type="video/mp4" />
         Your browser does not support the video tag.
