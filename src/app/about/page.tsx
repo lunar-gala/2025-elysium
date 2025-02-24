@@ -3,6 +3,8 @@
 import { useState, useEffect, useRef } from "react";
 import { useRouter } from 'next/navigation';
 import localFont from "next/font/local";
+import { motion } from "framer-motion";
+
 
 const greyMonoTrial = localFont({
     src: "../fonts/GreyMonoLLTrialWeb-Book.woff2",
@@ -66,10 +68,14 @@ export default function About() {
         <div className="h-full w-full flex items-center justify-center relative" onClick={handleClick}>
             <div ref={canvasRef} className="fixed top-0 left-0 w-full h-full z-0"></div>
             <div className="absolute top-0 left-0 w-full h-full bg-opacity-10 bg-[rgba(47,54,79,0.40)] backdrop-blur-xs z-51"></div>
-            <div className={`absolute w-1/2 text-justify text-white text-[16px] font-[450] leading-[120%] tracking-[-0.64px] uppercase ${greyMonoTrial.className} z-52 uppercase`}>
+            <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 2 }} className={`absolute w-1/2 text-justify text-white text-[16px] font-[450] leading-[120%] tracking-[-0.64px] uppercase ${greyMonoTrial.className} z-52 uppercase`}>
                 Lunar Gala 2025 ELYSIUM explores the idea of a neverending story. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </div>
+            </motion.div>
         </div>
       );
 }
