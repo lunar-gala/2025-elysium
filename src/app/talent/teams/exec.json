@@ -1,0 +1,57 @@
+[
+    {
+        "name": "Katherine Wang",
+        "position": "Producer, Model, Sound Designer",
+        "imagePath": "headshots/Katherine Wang.jpg"
+    },
+    {
+        "name": "Jeffrey Zhang",
+        "position": "Producer, Head of Model",
+        "imagePath": "headshots/Jeffrey Zhang.jpg"
+    },
+    {
+        "name": "Ray Ka",
+        "position": "Creative Director",
+        "imagePath": "headshots/Ray Ka.jpg"
+    },
+    {
+        "name": "Leslie Lin",
+        "position": "Creative Director",
+        "imagePath": "headshots/Leslie Lin.jpg"
+    },
+    {
+        "name": "Julia Kasper",
+        "position": "Head of Design",
+        "imagePath": "headshots/Julia Kasper.jpg"
+    },
+    {
+        "name": "Mildred Amofa",
+        "position": "Head of Model",
+        "imagePath": "headshots/Mildred Amofa.jpg"
+    },
+    {
+        "name": "Nick Barreto",
+        "position": "Head of Production",
+        "imagePath": "headshots/Nick Barreto.jpg"
+    },
+    {
+        "name": "Angela Huang",
+        "position": "Head of PR",
+        "imagePath": "headshots/Angela Huang.jpg"
+    },
+    {
+        "name": "Sally Pak",
+        "position": "Head of PR, Model, Finance",
+        "imagePath": "headshots/Sally Pak.jpg"
+    },
+    {
+        "name": "Tippi Li",
+        "position": "Head of Hair and Makeup",
+        "imagePath": "headshots/Tippi Li.jpg"
+    },
+    {
+        "name": "Grace Liao",
+        "position": "Head of Hair and Makeup",
+        "imagePath": "headshots/Grace Liao.jpg"
+    }
+]

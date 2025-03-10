@@ -5,24 +5,14 @@
         "imagePath": "headshots/Nick Barreto.jpg"
     },
     {
-        "name": "Ava Notarangelo",
-        "position": "Head of Lighting Design",
-        "imagePath": "headshots/Ava Notarangelo.jpg"
-    },
-    {
         "name": "Michelle Chen",
         "position": "Lighting Designer",
         "imagePath": "headshots/Michelle Chen.jpg"
     },
     {
         "name": "Sophie Ding",
-        "position": "Lighting Designer",
+        "position": "Lighting Designer, Stage Designer",
         "imagePath": "headshots/Sophie Ding.jpg"
-    },
-    {
-        "name": "Funmi Ekiyoyo",
-        "position": "Lighting Designer",
-        "imagePath": "headshots/Funmi Ekiyoyo.jpg"
     },
     {
         "name": "Renee Lin",
@@ -30,14 +20,9 @@
         "imagePath": "headshots/Renee Lin.jpg"
     },
     {
-        "name": "Felix Gabriel Ureña",
+        "name": "Felix Gabriel Urena",
         "position": "Head of Sound Design",
-        "imagePath": "headshots/Felix Gabriel Ureña.jpg"
-    },
-    {
-        "name": "Samyukta Athreya",
-        "position": "Sound Designer",
-        "imagePath": "headshots/Samyukta Athreya.jpg"
+        "imagePath": "headshots/Felix Gabriel.jpg"
     },
     {
         "name": "Blaine Black",
@@ -50,11 +35,6 @@
         "imagePath": "headshots/Evan Neely.jpg"
     },
     {
-        "name": "Harry Schneider",
-        "position": "Sound Designer",
-        "imagePath": "headshots/Harry Schneider.jpg"
-    },
-    {
         "name": "Kaloyan Stefanov",
         "position": "Sound Designer",
         "imagePath": "headshots/Kaloyan Stefanov.jpg"
@@ -63,6 +43,11 @@
         "name": "Rowan Sullivan",
         "position": "Sound Designer",
         "imagePath": "headshots/Rowan Sullivan.jpg"
+    },
+    {
+        "name": "Katherine Wang",
+        "position": "Sound Designer, Producer, Model",
+        "imagePath": "headshots/Katherine Wang.jpg"
     },
     {
         "name": "Ryan Zhang",
@@ -80,11 +65,6 @@
         "imagePath": "headshots/Lucy Gunther.jpg"
     },
     {
-        "name": "Nicole Ortuno",
-        "position": "Stage Manager",
-        "imagePath": "headshots/Nicole Ortuno.jpg"
-    },
-    {
         "name": "Ella Sanfilippo",
         "position": "Stage Manager",
         "imagePath": "headshots/Ella Sanfilippo.jpg"
@@ -100,19 +80,9 @@
         "imagePath": "headshots/Erin Choi.jpg"
     },
     {
-        "name": "Prisha Garg",
-        "position": "Box Office",
-        "imagePath": "headshots/Prisha Garg.jpg"
-    },
-    {
         "name": "Zenzele Kelly",
         "position": "Box Office",
         "imagePath": "headshots/Zenzele Kelly.jpg"
-    },
-    {
-        "name": "Esha Shah",
-        "position": "Box Office",
-        "imagePath": "headshots/Esha Shah.jpg"
     },
     {
         "name": "Kashish Sindhwani",
@@ -121,7 +91,7 @@
     },
     {
         "name": "Tom Zhang",
-        "position": "Box Office",
+        "position": "Box Office, PR",
         "imagePath": "headshots/Tom Zhang.jpg"
     },
     {
@@ -131,7 +101,7 @@
     },
     {
         "name": "Yujin Lee",
-        "position": "Livestream",
+        "position": "Livestream, Photography and Cinematography",
         "imagePath": "headshots/Yujin Lee.jpg"
     }
 ]

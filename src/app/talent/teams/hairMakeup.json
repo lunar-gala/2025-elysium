@@ -1,52 +1,52 @@
 [
     {
         "name": "Tippi Li",
-        "position": "Head of Hair & Makeup",
+        "position": "Head of Hair and Makeup",
         "imagePath": "headshots/Tippi Li.jpg"
     },
     {
         "name": "Grace Liao",
-        "position": "Head of Hair & Makeup",
+        "position": "Head of Hair and Makeup",
         "imagePath": "headshots/Grace Liao.jpg"
     },
     {
         "name": "Irene Chou",
-        "position": "Hair & Makeup Artist",
+        "position": "Hair and Makeup Artist",
         "imagePath": "headshots/Irene Chou.jpg"
     },
     {
+        "name": "Veronika Eber",
+        "position": "Hair and Makeup Artist",
+        "imagePath": "headshots/Veronika Eber.jpg"
+    },
+    {
         "name": "Emily Hacking",
-        "position": "Hair & Makeup Artist",
+        "position": "Hair and Makeup Artist",
         "imagePath": "headshots/Emily Hacking.jpg"
     },
     {
+        "name": "Naza Monjur",
+        "position": "Hair and Makeup Artist",
+        "imagePath": "headshots/Naza Monjur.jpg"
+    },
+    {
         "name": "Nicole Ortuno",
-        "position": "Hair & Makeup Artist",
+        "position": "Hair and Makeup Artist, Stage Manager",
         "imagePath": "headshots/Nicole Ortuno.jpg"
     },
     {
+        "name": "Advika Vuppala",
+        "position": "Hair and Makeup Artist",
+        "imagePath": "headshots/Advika Vuppala.jpg"
+    },
+    {
         "name": "Vahini Walia",
-        "position": "Hair & Makeup Artist",
+        "position": "Hair and Makeup Artist",
         "imagePath": "headshots/Vahini Walia.jpg"
     },
     {
         "name": "Belinda Wu",
-        "position": "Hair & Makeup Artist",
+        "position": "Hair and Makeup Artist",
         "imagePath": "headshots/Belinda Wu.jpg"
-    },
-    {
-        "name": "Advika Vuppala",
-        "position": "Hair & Makeup Artist",
-        "imagePath": "headshots/Advika Vuppala.jpg"
-    },
-    {
-        "name": "Veronika Eber",
-        "position": "Hair & Makeup Artist",
-        "imagePath": "headshots/Veronika Eber.jpg"
-    },
-    {
-        "name": "Naza Monjur",
-        "position": "Hair & Makeup Artist",
-        "imagePath": "headshots/Naza Monjur.jpg"
     }
 ]

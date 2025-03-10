@@ -7,13 +7,13 @@ import { useIsVisible } from "./utils/intersecting";
 import { motion } from "framer-motion";
 
 const categories = [
-  "Producers",
+  "Exec",
   "Creative",
   "Design",
   "Model",
-  "Public Relations",
   "Production",
-  "Hair & Makeup",
+  "Public Relations",
+  "Hair and Makeup",
   "Dance",
 ];
 

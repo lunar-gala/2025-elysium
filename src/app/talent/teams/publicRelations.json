@@ -5,9 +5,9 @@
         "imagePath": "headshots/Angela Huang.jpg"
     },
     {
-        "name": "Stephanie Kim",
-        "position": "Subhead of PR",
-        "imagePath": "headshots/Stephanie Kim.jpg"
+        "name": "Sally Pak",
+        "position": "Head of PR, Model, Finance",
+        "imagePath": "headshots/Sally Pak.jpg"
     },
     {
         "name": "Aanika Schueler",
@@ -16,42 +16,32 @@
     },
     {
         "name": "Olivia Acquaah-Harrison",
-        "position": "PR Team Member",
+        "position": "PR",
         "imagePath": "headshots/Olivia Acquaah-Harrison.jpg"
     },
     {
         "name": "Susan Chen",
-        "position": "PR Team Member",
+        "position": "PR",
         "imagePath": "headshots/Susan Chen.jpg"
     },
     {
         "name": "Cassie May",
-        "position": "PR Team Member",
+        "position": "PR",
         "imagePath": "headshots/Cassie May.jpg"
     },
     {
         "name": "Alycen Kim",
-        "position": "PR Team Member",
+        "position": "PR",
         "imagePath": "headshots/Alycen Kim.jpg"
     },
     {
         "name": "Isha Patel",
-        "position": "PR Team Member",
+        "position": "PR",
         "imagePath": "headshots/Isha Patel.jpg"
     },
     {
-        "name": "Angie Reyes",
-        "position": "PR Team Member",
-        "imagePath": "headshots/Angie Reyes.jpg"
-    },
-    {
-        "name": "Carolyn Wei",
-        "position": "PR Team Member",
-        "imagePath": "headshots/Carolyn Wei.jpg"
-    },
-    {
         "name": "Tom Zhang",
-        "position": "PR Team Member",
+        "position": "PR, Box Office",
         "imagePath": "headshots/Tom Zhang.jpg"
     }
 ]

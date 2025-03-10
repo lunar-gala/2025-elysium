@@ -1,127 +1,117 @@
 [
     {
         "name": "Julia Kasper",
-        "position": "Head of Design",
+        "position": "Head of Design, Aporia",
         "imagePath": "headshots/Julia Kasper.jpg"
     },
     {
         "name": "Clarine Lee",
-        "position": "Design Coordinator",
+        "position": "Design Coordinator, Pado",
         "imagePath": "headshots/Clarine Lee.jpg"
     },
     {
         "name": "Brooke Schwartz",
-        "position": "Design Coordinator",
+        "position": "Design Coordinator, Reverie",
         "imagePath": "headshots/Brooke Schwartz.jpg"
     },
     {
-        "name": "Erika Egliskis",
-        "position": "Designer",
-        "imagePath": "headshots/Erika Egliskis.jpg"
-    },
-    {
-        "name": "Sunny Guo",
-        "position": "Designer",
-        "imagePath": "headshots/Sunny Guo.jpg"
-    },
-    {
-        "name": "Sueah Kim",
-        "position": "Designer",
-        "imagePath": "headshots/Sueah Kim.jpg"
-    },
-    {
-        "name": "Aziza Norkulova",
-        "position": "Designer",
-        "imagePath": "headshots/Aziza Norkulova.jpg"
-    },
-    {
-        "name": "Josephine Kim",
-        "position": "Designer",
-        "imagePath": "headshots/Josephine Kim.jpg"
-    },
-    {
-        "name": "Clarine Lee",
-        "position": "Designer",
-        "imagePath": "headshots/Clarine Lee.jpg"
+        "name": "Jason Asiedu",
+        "position": "Designer, Recupera-Se",
+        "imagePath": "headshots/Jason Asiedu.jpg"
     },
     {
         "name": "Anika Bhagavatula",
-        "position": "Designer",
+        "position": "Designer, Eve",
         "imagePath": "headshots/Anika Bhagavatula.jpg"
     },
     {
-        "name": "Jason Asiedu",
-        "position": "Designer",
-        "imagepath": "headshots/Jason Asiedu.jpg"
-    },
-    {
-        "name": "Nataniella Essang",
-        "position": "Designer",
-        "imagepath": "headshots/Nataniella Essang.jpg"
-    },
-    {
-        "name": "Mikayla Gee",
-        "position": "Designer",
-        "imagepath": "headshots/Mikayla Gee.jpg"
-    },
-    {
-        "name": "Sadie Han",
-        "position": "Designer",
-        "imagepath": "headshots/Sadie Han.jpg"
-    },
-    {
-        "name": "Ashley Park",
-        "position": "Designer",
-        "imagepath": "headshots/Ashley Park.jpg"
-    },
-    {
-        "name": "Räyya Gracy",
-        "position": "Designer",
-        "imagepath": "headshots/Räyya Gracy.jpg"
-    },
-    {
-        "name": "Jackson Underwood",
-        "position": "Designer",
-        "imagepath": "headshots/Jackson Underwood.jpg"
+        "name": "Amy Cha",
+        "position": "Designer, Balance",
+        "imagePath": "headshots/Amy Cha.jpg"
     },
     {
         "name": "Abby Chen",
-        "position": "Designer",
-        "imagepath": "headshots/Abby Chen.jpg"
+        "position": "Designer, Eaclipse",
+        "imagePath": "headshots/Abby Chen.jpg"
     },
     {
-        "name": "Eugene Kim",
-        "position": "Designer",
-        "imagepath": "headshots/Eugene Kim.jpg"
+        "name": "Erika Egliskis",
+        "position": "Designer, Immensity",
+        "imagePath": "headshots/Erika Egliskis.jpg"
     },
     {
-        "name": "Brooke Schwartz",
-        "position": "Designer",
-        "imagepath": "headshots/Brooke Schwartz.jpg"
-    },
-    {
-        "name": "Amy Cha",
-        "position": "Designer",
-        "imagepath": "headshots/Amy Cha.jpg"
-    },
-    {
-        "name": "Nate Neira",
-        "position": "Designer",
-        "imagepath": "headshots/Nate Neira.jpg"
+        "name": "Nataniella Essang",
+        "position": "Designer, Recupera-Se",
+        "imagePath": "headshots/Nataniella Essang.jpg"
     },
     {
         "name": "Lili Fishman",
-        "position": "Designer",
-        "imagepath": "headshots/Lili Fishman.jpg"
+        "position": "Designer, Celestial Vanity",
+        "imagePath": "headshots/Lili Fishman.jpg"
+    },
+    {
+        "name": "Mikayla Gee",
+        "position": "Designer, Recupera-Se",
+        "imagePath": "headshots/Mikayla Gee.jpg"
+    },
+    {
+        "name": "Rayya Gracy",
+        "position": "Designer, Avarice",
+        "imagePath": "headshots/Räyya Gracy.jpg"
+    },
+    {
+        "name": "Sunny Guo",
+        "position": "Designer, Immensity",
+        "imagePath": "headshots/Sunny Guo.jpg"
+    },
+    {
+        "name": "Sadie Han",
+        "position": "Designer, Follow Me Through it All",
+        "imagePath": "headshots/Sadie Han.jpg"
+    },
+    {
+        "name": "Nicole Huang",
+        "position": "Designer, Shattered Silk",
+        "imagePath": "headshots/Nicole Huang.jpg"
+    },
+    {
+        "name": "Josephine Kim",
+        "position": "Designer, Pado",
+        "imagePath": "headshots/Josephine Kim.jpg"
+    },
+    {
+        "name": "Eugene Kim",
+        "position": "Designer, Eaclipse",
+        "imagePath": "headshots/Eugene Kim.jpg"
+    },
+    {
+        "name": "Sueah Kim",
+        "position": "Designer, Ka",
+        "imagePath": "headshots/Sueah Kim.jpg"
+    },
+    {
+        "name": "Nate Neira",
+        "position": "Designer, Self Love",
+        "imagePath": "headshots/Nate Neira.jpg"
+    },
+    {
+        "name": "Aziza Norkulova",
+        "position": "Designer, East Meets West",
+        "imagePath": "headshots/Aziza Norkulova.jpg"
+    },
+    {
+        "name": "Ashley Park",
+        "position": "Designer, Follow Me Through it All",
+        "imagePath": "headshots/Ashley Park.jpg"
+    },
+    {
+        "name": "Jackson Underwood",
+        "position": "Designer, Avarice",
+        "imagePath": "headshots/Jackson Underwood.jpg"
     },
     {
         "name": "Anais Yoon",
-        "position": "Designer",
-        "imagepath": "headshots/Anais Yoon.jpg"
-    },
-    {
-        "name": "Nicole Si Yao Huang",
-        "position": "Designer",
-        "imagepath": "headshots/Nicole Si Yao Huang.jpg"
+        "position": "Designer, Celestial Vanity",
+        "imagePath": "headshots/Anais Yoon.jpg"
     }
 ]

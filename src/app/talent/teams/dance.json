@@ -1,12 +1,67 @@
 [
     {
-        "name": "Infra Dance Company",
-        "position": "Dance Team",
-        "imagePath": "headshots/Infra Dance Company.jpg"
+        "name": "Jialing Bi",
+        "position": "Infra",
+        "imagePath": "headshots/Jialing Bi.jpg"
     },
     {
-        "name": "SoulStylz",
-        "position": "Dance Team",
-        "imagePath": "headshots/SoulStylz.jpg"
+        "name": "Chase Gumbs",
+        "position": "SoulStylz",
+        "imagePath": "headshots/Chase Gumbs.jpg"
+    },
+    {
+        "name": "Rebecca Jiang",
+        "position": "SoulStylz",
+        "imagePath": "headshots/Rebecca Jiang.jpg"
+    },
+    {
+        "name": "Caroline Kiewel",
+        "position": "Infra",
+        "imagePath": "headshots/Carolin Kiewel.jpg"
+    },
+    {
+        "name": "Angela Lee",
+        "position": "SoulStylz",
+        "imagePath": "headshots/Angela Lee.jpg"
+    },
+    {
+        "name": "Lauren Loria-Sklar",
+        "position": "Infra, SoulStylz",
+        "imagePath": "headshots/Lauren Loria-Sklar.jpg"
+    },
+    {
+        "name": "Brooklyn Mao",
+        "position": "Infra",
+        "imagePath": "headshots/Brooklyn Mao.jpg"
+    },
+    {
+        "name": "Roy Park",
+        "position": "SoulStylz",
+        "imagePath": "headshots/Roy Park.jpg"
+    },
+    {
+        "name": "Ianca Santos De Los",
+        "position": "Infra",
+        "imagePath": "headshots/Ianca Santos De Los.jpg"
+    },
+    {
+        "name": "Audrey Shao",
+        "position": "Infra",
+        "imagePath": "headshots/Audrey Shao.jpg"
+    },
+    {
+        "name": "Sonya Simkin",
+        "position": "Infra",
+        "imagePath": "headshots/Sonya Simkin.jpg"
+    },
+    {
+        "name": "Lily Stern",
+        "position": "Infra",
+        "imagePath": "headshots/Lily Stern.jpg"
+    },
+    {
+        "name": "Samantha Vu",
+        "position": "Infra",
+        "imagePath": "headshots/Samantha Vu.jpg"
     }
 ]
