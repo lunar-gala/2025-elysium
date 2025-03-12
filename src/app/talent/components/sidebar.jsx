@@ -15,10 +15,8 @@ const Sidebar = ({selected, categories}) => {
   return (
     <div className="sticky top-[250px] align-self: start">
       <div className="relative">
-  <div 
-    className="w-[2px] bg-gray-700 transition-all duration-300" 
-    style={{ height: `115px` }}
-  ></div>
+  <div className="w-[2px] bg-gray-700 transition-all duration-300 h-[200px] sm:h-[140px]"
+    ></div>
   <ul className="text-gray-500 absolute top-0 left-0 w-full">
     {categories.map((category) => (
       <li key={category}>
