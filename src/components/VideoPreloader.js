@@ -29,7 +29,7 @@ const VideoPreloader = ({ onComplete }) => {
         type="video/mp4"
       >
         <source
-          src="https://res.cloudinary.com/ddjxpkewq/video/upload/f_auto:video,q_auto/v1/lg/uelohmn4ldqfkuldngoo"
+          src="https://vstaicu-portfolio-assets.s3.us-east-2.amazonaws.com/elysium-headshots/xiao-preloader-4_1_5.mov"
           type="video/mp4"
         />
         Your browser does not support the video tag.
