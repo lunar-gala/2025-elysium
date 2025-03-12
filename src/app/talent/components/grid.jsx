@@ -10,7 +10,6 @@ import danceData from "../teams/dance.json";
 import execData from "../teams/exec.json";
 import creativeData from "../teams/creative.json";
 
-
 const greyMonoTrial = localFont({
   src: "../../fonts/GreyMonoLLTrialWeb-Book.woff2",
   variable: "--font-grey-mono-trial",
@@ -35,7 +34,12 @@ const PeopleGrid = ({ refs, categories }) => {
             <div className="grid grid-cols-2 sm:grid-cols-12 gap-[10px]">
                 {categoryDataMap[category].map((person, index) => (
                 <div key={index} className="justify-left col-span-1 sm:col-span-3">
-                    <img src={person.imagePath} alt={person.name} className="w-full" />
+                    <img 
+                        src={person.imagePath || ""} 
+                        alt={person.name} 
+                        className="w-full" 
+                        loading="eager"
+                    />
                     <p className={`mt-2 text-white text-opacity-40 text-justify ${greyMonoTrial.className} text-sm 
             font-medium leading-[16.8px] 
             tracking-[-0.56px] uppercase`}>{person.name}</p>
