@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react'
-import Sketch from './glslActThree/Sketch'
+// import Sketch from './glslActThree/Sketch'
+import Sketch from './glslActThree-two/Sketch'
 
 const ActTwoThreeCanvas = () => {
   const containerRef = useRef(null)
