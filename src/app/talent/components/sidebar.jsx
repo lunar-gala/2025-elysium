@@ -15,10 +15,8 @@ const Sidebar = ({selected, categories}) => {
   return (
     <div className="sticky top-[250px] align-self: start">
       <div className="relative">
-  <div 
-    className="w-[2px] bg-gray-700 transition-all duration-300" 
-    style={{ height: `115px` }}
-  ></div>
+  <div className="h-[200px] sm:h-[140px] w-[2px] bg-gray-700 transition-all duration-300"
+    ></div>
   <ul className="text-gray-500 absolute top-0 left-0 w-full">
     {categories.map((category) => (
       <li key={category}>
@@ -32,7 +30,7 @@ const Sidebar = ({selected, categories}) => {
           </div>
         )}
           <button
-            onClick={() => handleClick(category)}
+            onClick={ () => handleClick(category)}
             className={`cursor-pointer transition-colors duration-200 ${
               selected === category ? "text-white text-opacity-40" : "text-gray"
             } hover:text-white ml-4 text-justify ${greyMonoTrial.className} text-sm 
