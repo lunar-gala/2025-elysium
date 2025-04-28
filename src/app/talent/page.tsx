@@ -94,11 +94,12 @@ export default function Talent() {
     >
       <div ref={canvasRef} className="fixed top-0 left-0 w-full h-full z-0"></div>
     </motion.div>
+    
     <motion.div
     initial={{ opacity: 0 }}
     animate={{ opacity: 1}}
     exit={{ opacity: 0 }}
-    transition={{ duration: 0.5, delay: 1.3 }}
+    transition={{ duration: 0.5, delay: 1.2 }}
     >
       <div className="grid grid-cols-6 lg:grid-cols-16 gap-[10px] ml-[20px] mt-[250px] mr-[1rem] absolute top-0 left-0 z-10">
         <div className="col-span-1 lg:col-span-2 lg:col-start-2">
@@ -109,6 +110,6 @@ export default function Talent() {
         </div>
       </div>
     </motion.div>
-      </>
+    </>
   );
 }
