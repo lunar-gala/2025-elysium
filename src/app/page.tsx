@@ -24,7 +24,9 @@ const ultraLight = localFont({
 // Define acts and Roman numerals (1-based index)
 const romanNumerals = ["I", "II", "III", "IV"];
 const acts = ["Emergence", "Blossom", "Hubris", "Embrace"];
-const lines = [["line1", "line2"], ["line3", "line4"]]
+const lines = [["Immensity", "Ka", "East Meets West"], 
+["Pado", "Eve", "Recupera Se", "Follow Me Through it All", "Unearthed"], 
+["Avarice", "Eaclipse", "Reverie", "Balance"], ["Self Love", "Celestial Vanity", "Shattered Silk", "Closing (Aporia)"]]
 
 // Function to get the correct ActParticles component
 const getActParticles = (index: number) => {
@@ -38,12 +40,16 @@ const getActParticles = (index: number) => {
     }
   })();
 
+  
+
   return (
     <div className="transform -translate-y-10">
       <Component />
     </div>
   );
 };
+
+
 
 export default function Home() {
   const [actIndex, setActIndex] = useState(1);
@@ -53,6 +59,7 @@ export default function Home() {
   const [isModelLineHovered2, setModelLineHovered2] = useState(false); 
   const [isModelLineHovered3, setModelLineHovered3] = useState(false); 
   const [isPreloaderComplete, setIsPreloaderComplete] = useState(false);
+  const [hoveredTick, setHoveredTick] = useState<number | null>(null);
 
   useEffect(() => {
     const hasSeenPreloader = sessionStorage.getItem("hasSeenPreloader");
@@ -128,45 +135,77 @@ export default function Home() {
         
 
         {/* MIDDLE UI */}
-        <div className="flex items-center justify-around w-1/3 px-2 md:px-4">
-          {/* bounding box for tick */}
-          <div className="group w-[2vw] h-[2vw] flex items-center justify-around"
-            onMouseEnter={() => setModelLineHovered1(true)}
-            onMouseLeave={() => setModelLineHovered1(false)}
-          >
-            <div
-              className={`h-[12px] w-[1px] text-center z-10 transition-all duration-200 ${isModelLineHovered1 ? 'bg-white' : 'bg-gray-600'}`}
-              style={{
-                transform: isModelLineHovered1 ? "rotate(90deg)" : "rotate(0deg)",
-                transition: "all 0.2s cubic-bezier(.55,-0.03,.03,1.04)",
-              }}
-            ></div>
-          </div>
-          <div className="group w-[2vw] h-[2vw] flex items-center justify-around"
-            onMouseEnter={() => setModelLineHovered2(true)}
-            onMouseLeave={() => setModelLineHovered2(false)}
-          >
-            <div
-              className={`h-[12px] w-[1px] text-center z-10 transition-all duration-200 ${isModelLineHovered2 ? 'bg-white' : 'bg-gray-600'}`}
-              style={{
-                transform: isModelLineHovered2 ? "rotate(90deg)" : "rotate(0deg)",
-                transition: "all 0.2s cubic-bezier(.55,-0.03,.03,1.04)",
-              }}
-            ></div>
-          </div>
-          <div className="group w-[2vw] h-[2vw] flex items-center justify-around"
-            onMouseEnter={() => setModelLineHovered3(true)}
-            onMouseLeave={() => setModelLineHovered3(false)}
-          >
-            <div
-              className={`h-[12px] w-[1px] text-center z-10 transition-all duration-200 ${isModelLineHovered3 ? 'bg-white' : 'bg-gray-600'}`}
-              style={{
-                transform: isModelLineHovered3 ? "rotate(90deg)" : "rotate(0deg)",
-                transition: "all 0.2s cubic-bezier(.55,-0.03,.03,1.04)",
-              }}
-            ></div>
-          </div>
-        </div>
+
+        <div className="absolute left-1/2 transform -translate-x-1/2 bottom-16 flex justify-center w-full">
+<div
+  className={`flex items-center justify-around px-2 md:px-4`}
+  style={{
+    width: `${Math.min(80, lines[actIndex - 1].length * 10)}vw`, // Dynamically adjust width based on the number of items
+  }}
+>
+  {lines[actIndex - 1].map((item, index) => (
+    <div
+      key={index}
+      className="group w-[2vw] h-[2vw] flex items-center justify-around"
+      onMouseEnter={() => setHoveredTick(index)} // Set the hovered tick index
+      onMouseLeave={() => setHoveredTick(null)} // Reset the hovered tick index
+    >
+      <div
+        className={`h-[12px] w-[1px] text-center z-10 transition-all duration-200 ${
+          hoveredTick === index ? "bg-white" : "bg-gray-600"
+        }`}
+        style={{
+          transform: hoveredTick === index ? "rotate(90deg)" : "rotate(0deg)",
+          transition: "all 0.2s cubic-bezier(.55,-0.03,.03,1.04)",
+        }}
+      ></div>
+
+      <div
+        className=" flex justify-center w-fit text-center text-sm mt-2 font-MonoTrial whitespace-nowrap "
+        style={{
+          transform: "translateY(15px)", // Translate the entire UI down by 10px
+          maxWidth: "4vw", // Ensure the text does not exceed the width of the tick container
+          
+        }}
+      >
+        {item}
+      </div>
+    </div>
+  ))}
+</div>
+</div>
+
+
+{/* MIDDLE UI */}
+{/*
+<div className="absolute left-1/2 transform -translate-x-1/2 bottom-16 flex justify-center w-full">
+  <div
+    className="flex items-center justify-around px-2 md:px-4"
+    style={{
+      width: `${Math.min(80, lines[actIndex - 1].length * 10)}vw`, // Dynamically adjust width based on the number of items
+    }}
+  >
+    {lines[actIndex - 1].map((_, index) => (
+      <div
+        key={index}
+        className="group w-[2vw] h-[2vw] flex items-center justify-around"
+        onMouseEnter={() => setHoveredTick(index)} // Set the hovered tick index
+        onMouseLeave={() => setHoveredTick(null)} // Reset the hovered tick index
+      >
+        <div
+          className={`h-[12px] w-[1px] text-center z-10 transition-all duration-200 ${
+            hoveredTick === index ? "bg-white" : "bg-gray-600"
+          }`}
+          style={{
+            transform: hoveredTick === index ? "rotate(90deg)" : "rotate(0deg)",
+            transition: "all 0.2s cubic-bezier(.55,-0.03,.03,1.04)",
+          }}
+        ></div>
+      </div>
+    ))}
+  </div>
+</div>
+*/}
 
         {/* Right Navigation */}
         <button
@@ -188,8 +227,28 @@ export default function Home() {
             }}
           />
         </button>
+        
       </div>
+
+      {/* Bottom Items (Dynamic based on Act Index) */}
+      {/*
+<div className={`absolute bottom-10 left-1/2 transform -translate-x-1/2 flex justify-center w-full px-4 md:px-[3vw] text-sm font-light ${greyMonoTrial.className}`}>
+  <div
+    className="flex items-center justify-around font-MonoTrial"
+    style={{
+      width: `${Math.min(80, lines[actIndex - 1].length * 9)}vw`, // Dynamically adjust width based on the number of items
+    }}
+  >
+    {lines[actIndex - 1].map((item, index) => (
+      <p key={index} className="text-center">
+        {item}
+      </p>
+    ))}
+  </div>
+</div>
+*/}
     </div>
+    
   );
 }
 
