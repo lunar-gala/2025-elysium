@@ -172,7 +172,7 @@ const lines: Record<string, {
     designers: ['Nate Neira'],
     sound: 'Evan Neely',
     motion: 'motion',
-    photo: 'photo',
+    photo: ['photo'],
     description: "Self Love is the form of structural features of clothing that are representative of aspects of love itself, both internal and external, that build towards a fully formed visual experience. We are relating the concept of 'path to paradise' to the process of growth that allows one to find themselves and deal with existing as themselves through progression of expressionism related to positive and negative emotional experiences.",
     images: [],
   },
