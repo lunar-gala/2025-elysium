@@ -33,7 +33,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts"
-  ],
+, "src/app/lines/components/P5sketch.tsx"  ],
   "exclude": [
     "node_modules"
   ]

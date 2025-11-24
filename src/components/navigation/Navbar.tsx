@@ -19,10 +19,11 @@ const moodCrowd = localFont({
 const Navbar = () => {
   const pathname = usePathname();
 
-  const linkClasses = (href: string) =>
+  const linkClasses = (hrefPrefix: string) =>
     `text-white/40 hover:text-white/70 text-justify ${greyMonoTrial.className} text-[14px] font-[450] leading-normal tracking-[-0.56px] ${
-      pathname === href ? "text-white/90" : ""
-    }`;
+      pathname.startsWith(hrefPrefix) ? "text-white/90" : ""
+  }`;
+
 
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -119,7 +120,7 @@ const Navbar = () => {
           {/* Left Menu */}
           <div className="hidden sm:flex gap-4 rounded h-full items-center flex-1 justify-end">
             <a href="/about" className={linkClasses("/about")}>About</a>
-            <a href="/lines" className={linkClasses("/lines")}>Lines</a>
+            <a href="/lines/1" className={linkClasses("/lines")}>Lines</a>
             <a href="/talent" className={linkClasses("/talent")}>Talent</a>
           </div>
 
@@ -158,7 +159,7 @@ const Navbar = () => {
         </button>
         <div className="flex flex-col gap-4 mt-16 px-6">
           <a href="/about" className={linkClasses("/about")} onClick={() => setMenuOpen(false)}>About</a>
-          <a href="/lines" className={linkClasses("/lines")} onClick={() => setMenuOpen(false)}>Lines</a>
+          <a href="/lines/1" className={linkClasses("/lines")} onClick={() => setMenuOpen(false)}>Lines</a>
           <a href="/talent" className={linkClasses("/talent")} onClick={() => setMenuOpen(false)}>Talent</a>
           <a href="/merch" className={linkClasses("/merch")} onClick={() => setMenuOpen(false)}>Merch</a>
           <a href="/archive" className={linkClasses("/archive")} onClick={() => setMenuOpen(false)}>Archive ↗</a>
