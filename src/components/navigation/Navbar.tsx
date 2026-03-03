@@ -134,8 +134,12 @@ const Navbar = () => {
 
           {/* Right Menu */}
           <div className="hidden sm:flex gap-4 rounded h-full items-center flex-1 justify-start">
-            <a href="/merch" className={linkClasses("/merch")}>Merch</a>
-            <a href="/archive" className={linkClasses("/archive")}>
+            <a
+              href="https://2025archive.lunargala.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={linkClasses("")}
+            >
               Archive <span className="ml-1 hidden lg:inline-block">↗</span>
             </a>
             <a
@@ -162,7 +166,15 @@ const Navbar = () => {
           <a href="/lines/1" className={linkClasses("/lines")} onClick={() => setMenuOpen(false)}>Lines</a>
           <a href="/talent" className={linkClasses("/talent")} onClick={() => setMenuOpen(false)}>Talent</a>
           <a href="/merch" className={linkClasses("/merch")} onClick={() => setMenuOpen(false)}>Merch</a>
-          <a href="/archive" className={linkClasses("/archive")} onClick={() => setMenuOpen(false)}>Archive ↗</a>
+          <a
+            href="https://2025archive.lunargala.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white/40 hover:text-white/70 text-[14px]"
+            onClick={() => setMenuOpen(false)}
+          >
+            Archive ↗
+          </a>
           <a target="_blank" href="https://carnegiemellontickets.universitytickets.com/w/event.aspx?id=2591&p=1" className={linkClasses("")} onClick={() => setMenuOpen(false)}>Tickets ↗</a>
         </div>
       </div>
